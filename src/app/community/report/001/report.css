@@ -3,6 +3,20 @@
   순수 React 컴포넌트를 위한 커스텀 레이아웃 보정 스타일.
 */
 
+* {
+  cursor: default;
+  user-select: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+input, textarea {
+  cursor: text;
+  user-select: text;
+}
+
 img {
   background-color: #f5f5f5;
 }
