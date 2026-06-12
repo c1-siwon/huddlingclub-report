@@ -282,13 +282,13 @@ function Y() {
     /* @__PURE__ */ e(
       "div",
       {
-        className: `sticky top-0 z-50 w-full shrink-0 transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
-        children: /* @__PURE__ */ e("div", { className: s ? "flex items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[12px] overflow-x-auto [&::-webkit-scrollbar]:hidden" : "flex items-center justify-center py-[16px] overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none" }, children: /* @__PURE__ */ e("div", { className: s ? "flex gap-[12px] items-center w-fit mx-auto" : "backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)] flex gap-[12px] items-center w-fit mx-auto", children: M.map((a, d) => {
+        className: `sticky top-0 z-50 w-full shrink-0 overflow-x-hidden transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
+        children: /* @__PURE__ */ e("div", { className: "w-full overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none", scrollPaddingLeft: "20px", scrollPaddingRight: "20px" }, children: /* @__PURE__ */ e("div", { className: `flex justify-center w-full min-w-max ${s ? "py-[12px]" : "py-[16px]"}`, children: /* @__PURE__ */ e("div", { className: s ? "flex gap-[12px] items-center px-[20px]" : "backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)] flex gap-[12px] items-center px-[20px]", children: M.map((a, d) => {
           const r = c === d;
           return /* @__PURE__ */ e(
             "button",
             {
-              onClick: () => w(a.target, d),
+              onClick: (g) => { w(a.target, d); g.currentTarget.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" }); },
               "aria-pressed": r,
               className: `flex items-center justify-center px-[12px] py-[8px] rounded-[8px] shrink-0 cursor-pointer outline-none transition-all duration-200 border active:scale-[0.97] ${r ? "bg-[#0058e0] border-transparent" : "bg-white border-[#e5e7eb] hover:bg-[#f3f4f6]"}`,
               children: /* @__PURE__ */ e(
@@ -301,7 +301,7 @@ function Y() {
             },
             a.target
           );
-        }) }) })
+        }) }) }) })
       }
     )
   ] });
@@ -853,13 +853,13 @@ function J1() {
     /* @__PURE__ */ e(
       "div",
       {
-        className: `sticky top-0 z-50 w-full transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
-        children: /* @__PURE__ */ e("div", { className: "flex justify-center w-full overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none" }, children: /* @__PURE__ */ e("div", { className: `flex gap-[12px] items-center py-[12px] w-fit ${s ? "px-[20px]" : "px-[20px] backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)]"}`, children: B.map((a, d) => {
+        className: `sticky top-0 z-50 w-full overflow-x-hidden transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
+        children: /* @__PURE__ */ e("div", { className: "w-full overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none", scrollPaddingLeft: "20px", scrollPaddingRight: "20px" }, children: /* @__PURE__ */ e("div", { className: "flex justify-center w-full min-w-max py-[12px]", children: /* @__PURE__ */ e("div", { className: s ? "flex gap-[12px] items-center px-[20px]" : "backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)] flex gap-[12px] items-center px-[20px]", children: B.map((a, d) => {
           const r = c === d;
           return /* @__PURE__ */ e(
             "button",
             {
-              onClick: () => w(a.target, d),
+              onClick: (g) => { w(a.target, d); g.currentTarget.scrollIntoView({ behavior: "smooth", inline: "nearest", block: "nearest" }); },
               "aria-pressed": r,
               className: `flex items-center justify-center px-[12px] py-[8px] rounded-[8px] shrink-0 cursor-pointer outline-none transition-all duration-200 border active:scale-[0.97] ${r ? "bg-[#0058e0] border-transparent" : "bg-white border-[#e5e7eb] hover:bg-[#f3f4f6]"}`,
               children: /* @__PURE__ */ e(
@@ -872,7 +872,7 @@ function J1() {
             },
             a.target
           );
-        }) }) })
+        }) }) }) })
       }
     )
   ] });
