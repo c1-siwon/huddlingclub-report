@@ -427,9 +427,6 @@ function d1() {
     /* @__PURE__ */ e(c1, {})
   ] });
 }
-function C1() {
-  return /* @__PURE__ */ e("div", { className: "absolute bg-gradient-to-b bottom-[-0.05px] from-[rgba(255,255,255,0)] h-[86px] left-0 right-0 to-white" });
-}
 function BB1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
     /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
@@ -445,6 +442,15 @@ function DD1() {
     /* @__PURE__ */ e(CC1, {})
   ] });
 }
+function C1() {
+  return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
+    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
+      /* @__PURE__ */ e(BB1, {}),
+      /* @__PURE__ */ e(DD1, {})
+    ] }),
+    /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
+  ] });
+}
 function o1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
@@ -453,12 +459,8 @@ function o1() {
     ] }),
     /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
       /* @__PURE__ */ e(n1, {}),
-      /* @__PURE__ */ e(s1, {}),
+      /* @__PURE__  */ e(s1, {}),
       /* @__PURE__ */ e(d1, {})
-    ] }),
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(BB1, {}),
-      /* @__PURE__ */ e(DD1, {})
     ] }),
     /* @__PURE__ */ e(C1, {})
   ] });
@@ -1022,9 +1024,6 @@ function C2() {
     /* @__PURE__ */ e(d2, {})
   ] });
 }
-function o2() {
-  return /* @__PURE__ */ e("div", { className: "absolute bg-gradient-to-b bottom-[0.29px] from-[rgba(255,255,255,0)] h-[86px] left-0 right-0 to-white" });
-}
 function EE2() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
     /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
@@ -1040,6 +1039,15 @@ function GG2() {
     /* @__PURE__ */ e(FF2, {})
   ] });
 }
+function o2() {
+  return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
+    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
+      /* @__PURE__ */ e(EE2, {}),
+      /* @__PURE__ */ e(GG2, {})
+    ] }),
+    /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
+  ] });
+}
 function f2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
@@ -1050,10 +1058,6 @@ function f2() {
       /* @__PURE__ */ e(s2, {}),
       /* @__PURE__ */ e(c2, {}),
       /* @__PURE__ */ e(C2, {})
-    ] }),
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(EE2, {}),
-      /* @__PURE__ */ e(GG2, {})
     ] }),
     /* @__PURE__ */ e(o2, {})
   ] });
