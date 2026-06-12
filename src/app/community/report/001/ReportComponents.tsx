@@ -397,18 +397,18 @@ function K() {
   ] }) });
 }
 function X() {
-  return /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] overflow-clip relative rounded-[499.5px] shrink-0 size-[60px]", "data-name": "User Logo Container", children: /* @__PURE__ */ e(K, {}) });
+  return /* @__PURE__ */ e("div", { className: "overflow-clip relative shrink-0 size-[60px]", style: { borderRadius: "999px", border: "1px solid #e5e7eb" }, "data-name": "User Logo Container", children: /* @__PURE__ */ e("img", { src: "/community/report/001/puddy.png", alt: "퍼디 프로필", className: "absolute inset-0 w-full h-full object-cover", style: { borderRadius: "999px" } }) });
 }
 function e1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[6px] items-center relative shrink-0", "data-name": "User Name Container", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "김펭귄" }) }),
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "퍼디" }) }),
     /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", "data-name": "Badge", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "First Penguin" }) }) })
   ] });
 }
 function t1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
     /* @__PURE__ */ e(e1, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Toss ∙ 프로덕트 디자이너" }) })
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
 function l1() {
@@ -1028,18 +1028,18 @@ function X1() {
   ] }) });
 }
 function e2() {
-  return /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] overflow-clip relative rounded-[499.5px] shrink-0 size-[60px]", "data-name": "User Logo Container", children: /* @__PURE__ */ e(X1, {}) });
+  return /* @__PURE__ */ e("div", { className: "overflow-clip relative shrink-0 size-[60px]", style: { borderRadius: "999px", border: "1px solid #e5e7eb" }, "data-name": "User Logo Container", children: /* @__PURE__ */ e("img", { src: "/community/report/001/puddy.png", alt: "퍼디 프로필", className: "absolute inset-0 w-full h-full object-cover", style: { borderRadius: "999px" } }) });
 }
 function t2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[6px] items-center relative shrink-0", "data-name": "User Name Container", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "김펭귄" }) }),
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "퍼디" }) }),
     /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", "data-name": "Badge", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "First Penguin" }) }) })
   ] });
 }
 function l2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
     /* @__PURE__ */ e(t2, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Toss ∙ 프로덕트 디자이너" }) })
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
 function a2() {
@@ -1290,15 +1290,16 @@ const B2 = [
   }
 ];
 function Z2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-start relative shrink-0 w-full", "data-name": "Top AI News Details", children: B2.map((s, C) => /* @__PURE__ */ t("button", { type: "button", className: "bg-white relative shrink-0 w-full text-left transition-all duration-150 hover:bg-[#f9fafb] active:bg-[#f3f4f6] active:scale-[0.99] cursor-pointer", children: [
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-start relative shrink-0 w-full", style: { padding: 0 }, "data-name": "Top AI News Details", children: B2.map((s, C) => /* @__PURE__ */ t("button", { type: "button", className: "bg-white relative w-full text-left transition-all duration-150 hover:bg-[#f9fafb] active:bg-[#f3f4f6] active:scale-[0.99] cursor-pointer", style: { width: "100%" }, children: [
     /* @__PURE__ */ e("div", { "aria-hidden": !0, className: "absolute border-[#e5e7eb] border-b border-solid inset-0 pointer-events-none" }),
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-start pb-[17px] pt-[16px] px-[20px] relative size-full", children: /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", children: /* @__PURE__ */ t("div", { className: "bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[8px] items-start relative size-full", children: [
-      /* @__PURE__ */ e("div", { className: "aspect-[114/114] relative rounded-[8px] self-stretch shrink-0 overflow-hidden", children: /* @__PURE__ */ e("img", { alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full", src: E1 }) }),
-      /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative", children: [
-        /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] overflow-hidden relative shrink-0 text-[#171719] text-[14px] text-ellipsis w-full whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5] overflow-hidden text-ellipsis", children: s.title }) }),
-        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal leading-[1.8] text-[13px] text-[rgba(46,47,51,0.82)] w-full line-clamp-2", children: s.description })
+    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-row items-center gap-[12px] px-[20px] py-[16px] relative w-full", children: [
+      /* @__PURE__ */ e("div", { className: "shrink-0 overflow-hidden", style: { width: 100, height: 100, borderRadius: 8, background: "#f5f5f5" }, children: /* @__PURE__ */ e("img", { alt: "", className: "w-full h-full object-cover", style: { borderRadius: 8 }, src: E1 }) }),
+      /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-0 relative", children: [
+        /* @__PURE__ */ e("div", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[#4b5563] text-[12px]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s.date }) }),
+        /* @__PURE__ */ e("div", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[#171719] text-[14px] w-full", style: { display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }, children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s.title }) }),
+        /* @__PURE__ */ e("div", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[rgba(46,47,51,0.82)] text-[13px] w-full", style: { display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }, children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: s.description }) })
       ] })
-    ] }) }) })
+    ] })
   ] }, C)) });
 }
 function P2() {
@@ -1310,8 +1311,8 @@ function z2() {
   });
 }
 function R2() {
-  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "AI News Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center px-[20px] py-[60px] relative size-full", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(A2, {}) }),
+  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "AI News Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center py-[60px] relative size-full", children: [
+    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center px-[20px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(A2, {}) }),
     /* @__PURE__ */ e(z2, {})
   ] }) }) });
 }

@@ -63,3 +63,8 @@ img {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.15; }
 }
+
+/* 모바일 핫이슈 카드 마지막 아이템 border 숨김 */
+[data-name="Top AI News Details"] > button:last-child > div[aria-hidden="true"] {
+  border-bottom: none;
+}
