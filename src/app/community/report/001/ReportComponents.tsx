@@ -45,6 +45,44 @@ const {
 // use polyfill for React 18
 const r3 = (React as any).use || (() => { throw new Error("use is not available") });
 
+// 비밀번호 모달 Context
+const ModalContext = U2({ open: false, setOpen: (v: boolean) => {} });
+
+function PasswordModal() {
+  const { open, setOpen } = n3(ModalContext);
+  const [pw, setPw] = L("");
+  const [error, setError] = L("");
+  if (!open) return null;
+  const handleSubmit = () => {
+    if (pw === "huddling2024") {
+      setOpen(false);
+      setPw("");
+      setError("");
+    } else {
+      setError("비밀번호가 일치하지 않습니다.");
+    }
+  };
+  return /* @__PURE__ */ e("div", { className: "fixed inset-0 z-[9999] flex items-center justify-center", children: /* @__PURE__ */ t(Z, { children: [
+    /* @__PURE__ */ e("div", { className: "absolute inset-0 bg-black/50", onClick: () => setOpen(false) }),
+    /* @__PURE__ */ t("div", { className: "relative bg-white rounded-[16px] p-[32px] max-w-[400px] w-[90%] flex flex-col gap-[20px]", children: [
+      /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(false), className: "absolute top-[16px] right-[16px] text-[#9ca3af] hover:text-[#131313] text-[20px] cursor-pointer", children: "×" }),
+      /* @__PURE__ */ t("div", { className: "flex flex-col gap-[8px] text-center", children: [
+        /* @__PURE__ */ e("h2", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[20px] text-[#131313]", children: "구독 회원 전용 콘텐츠입니다" }),
+        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[14px] text-[#4b5563]", children: "구독 회원은 비밀번호를 입력해 전체 콘텐츠를 확인하세요." })
+      ] }),
+      /* @__PURE__ */ t("div", { className: "flex flex-col gap-[12px]", children: [
+        /* @__PURE__ */ e("input", { type: "password", value: pw, onChange: (ev) => { setPw(ev.target.value); setError(""); }, placeholder: "비밀번호 입력", className: "w-full border border-[#e5e7eb] rounded-[8px] px-[16px] py-[12px] font-['Pretendard_Variable',sans-serif] text-[14px] outline-none focus:border-[#0058e0]" }),
+        error && /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[13px] text-[#ef4444]", children: error }),
+        /* @__PURE__ */ e("button", { type: "button", onClick: handleSubmit, className: "w-full bg-[#0058e0] text-white font-['Pretendard_Variable',sans-serif] font-bold text-[14px] py-[12px] rounded-[8px] cursor-pointer hover:opacity-90 active:opacity-75", children: "확인" })
+      ] }),
+      /* @__PURE__ */ t("div", { className: "flex flex-col gap-[8px] text-center pt-[8px] border-t border-[#e5e7eb]", children: [
+        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[13px] text-[#9ca3af]", children: "아직 구독 회원이 아니신가요?" }),
+        /* @__PURE__ */ e("button", { type: "button", className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#0058e0] cursor-pointer hover:underline", children: "구독 신청하기" })
+      ] })
+    ] })
+  ] }) });
+}
+
 const m = {
   p1b4eb500: "M38.3922 14.5618C38.3911 14.8153 38.3623 14.9002 38.2529 15.03C38.1908 15.1037 38.0271 15.1808 37.8833 15.0455C37.6336 14.8092 37.6636 14.2423 37.9782 14.0859C38.2352 13.9577 38.3928 14.3394 38.3922 14.5612V14.5618Z",
   p232a7b0: "M18.5309 58.5837C17.2492 58.9926 16.8324 57.5001 16.4178 57.378C15.7367 57.1778 14.8352 57.7281 13.9988 57.7409C13.7062 57.7453 13.3066 57.5262 13.4076 57.1567C13.5286 56.7139 13.9033 56.3555 14.2052 56.0149L14.8352 55.3047C17.7377 56.0537 20.6574 56.4093 23.6575 56.5264C23.7424 57.0912 23.6142 57.8163 23.0852 58.1453C22.7017 58.3839 22.1988 58.1803 21.8219 58.0383L20.8844 57.4602C20.2794 57.2726 19.7515 58.1936 18.5309 58.5831V58.5837Z",
@@ -392,6 +430,21 @@ function d1() {
 function C1() {
   return /* @__PURE__ */ e("div", { className: "absolute bg-gradient-to-b bottom-[-0.05px] from-[rgba(255,255,255,0)] h-[86px] left-0 right-0 to-white" });
 }
+function BB1() {
+  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 과정에서 가장 어려웠던 점은 무엇인가요?" }) })
+  ] });
+}
+function CC1() {
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }) }) });
+}
+function DD1() {
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
+    /* @__PURE__ */ e(CC1, {})
+  ] });
+}
 function o1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
@@ -403,19 +456,18 @@ function o1() {
       /* @__PURE__ */ e(s1, {}),
       /* @__PURE__ */ e(d1, {})
     ] }),
+    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
+      /* @__PURE__ */ e(BB1, {}),
+      /* @__PURE__ */ e(DD1, {})
+    ] }),
     /* @__PURE__ */ e(C1, {})
   ] });
 }
-function f1() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) });
-}
-function p1() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) });
-}
 function x1() {
+  const { setOpen } = n3(ModalContext);
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children: [
-    /* @__PURE__ */ e(f1, {}),
-    /* @__PURE__ */ e(p1, {})
+    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) }),
+    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) })
   ] });
 }
 function h1() {
@@ -503,7 +555,8 @@ function k1() {
   ] });
 }
 function y1() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] content-stretch flex items-center justify-center px-[18px] py-[13px] relative rounded-[12px] shrink-0 w-full max-w-[560px] cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "▶ 풀 영상 다시 보기" }) }) });
+  const { setOpen } = n3(ModalContext);
+  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] content-stretch flex items-center justify-center px-[18px] py-[13px] relative rounded-[12px] shrink-0 w-full max-w-[560px] cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "영상 풀 버전 보러가기" }) }) });
 }
 function _1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
@@ -608,16 +661,21 @@ function Z1() {
 }
 function P1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Why Huddling Club" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "경험이 순환하는 커뮤니티" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "남극의 펭귄들이 서로 모여 추위를 견디듯," }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "허들링 클럽은 먼저 경험한 사람의 노하우가 다음 사람의 성장으로 이어집니다." })
-    ] }) })
+    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "헤드라인이 들어가는 영역입니다." }) }) }),
+    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "디스크립션 내용이 들어가는 영역입니다." }) }) })
+  ] });
+}
+function AA1() {
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full max-w-[560px]", children: [
+    /* @__PURE__ */ e("button", { type: "button", className: "border border-[#e5e7eb] bg-white relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[#131313] text-[14px] text-center whitespace-nowrap", children: "무료 카톡방 입장하기" }) }) }),
+    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "구독하기" }) }) })
   ] });
 }
 function z1() {
-  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Why Huddle Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[80px] relative size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center max-w-[560px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(P1, {}) }) }) }) });
+  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Why Huddle Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[32px] items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[80px] relative size-full", children: [
+    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center max-w-[560px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(P1, {}) }),
+    /* @__PURE__ */ e(AA1, {})
+  ] }) }) });
 }
 function R1() {
   return /* @__PURE__ */ t("div", { className: "bg-white content-stretch flex flex-col items-center relative size-full", "data-name": "Desktop", children: [
@@ -967,6 +1025,21 @@ function C2() {
 function o2() {
   return /* @__PURE__ */ e("div", { className: "absolute bg-gradient-to-b bottom-[0.29px] from-[rgba(255,255,255,0)] h-[86px] left-0 right-0 to-white" });
 }
+function EE2() {
+  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 과정에서 가장 어려웠던 점은 무엇인가요?" }) })
+  ] });
+}
+function FF2() {
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }) }) });
+}
+function GG2() {
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
+    /* @__PURE__ */ e(FF2, {})
+  ] });
+}
 function f2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
@@ -978,19 +1051,18 @@ function f2() {
       /* @__PURE__ */ e(c2, {}),
       /* @__PURE__ */ e(C2, {})
     ] }),
+    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
+      /* @__PURE__ */ e(EE2, {}),
+      /* @__PURE__ */ e(GG2, {})
+    ] }),
     /* @__PURE__ */ e(o2, {})
   ] });
 }
-function p2() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) });
-}
-function x2() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) });
-}
 function h2() {
+  const { setOpen } = n3(ModalContext);
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children: [
-    /* @__PURE__ */ e(p2, {}),
-    /* @__PURE__ */ e(x2, {})
+    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) }),
+    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__  */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) })
   ] });
 }
 function m2() {
@@ -1081,7 +1153,8 @@ function y2() {
   ] });
 }
 function _2() {
-  return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[14px] text-center text-white", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "▶ 풀 영상 다시 보기" }) }) }) }) });
+  const { setOpen } = n3(ModalContext);
+  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[14px] text-center text-white", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "영상 풀 버전 보러가기" }) }) }) }) });
 }
 function V2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
@@ -1178,17 +1251,21 @@ function R2() {
 }
 function S2() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Why Huddling Club" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "경험이 순환하는 커뮤니티" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "남극의 펭귄들이 서로 모여 추위를 견디듯," }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "허들링 클럽은 먼저 경험한 사람의 노하우가" }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "다음 사람의 성장으로 이어집니다." })
-    ] }) })
+    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "헤드라인이 들어가는 영역입니다." }) }) }),
+    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "디스크립션 내용이 들어가는 영역입니다." }) }) })
+  ] });
+}
+function D2() {
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full", children: [
+    /* @__PURE__ */ e("button", { type: "button", className: "border border-[#e5e7eb] bg-white relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[#131313] text-[14px] text-center whitespace-nowrap", children: "무료 카톡방 입장하기" }) }) }),
+    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "구독하기" }) }) })
   ] });
 }
 function E2() {
-  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Why Huddle Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] py-[60px] relative size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(S2, {}) }) }) }) });
+  return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Why Huddle Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[32px] items-center justify-center px-[20px] py-[60px] relative size-full", children: [
+    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(S2, {}) }),
+    /* @__PURE__ */ e(D2, {})
+  ] }) }) });
 }
 function $2() {
   return /* @__PURE__ */ t("div", { className: "bg-white content-stretch flex flex-col items-center relative size-full", "data-name": "Mobile", children: [
@@ -1223,11 +1300,13 @@ function I2() {
   ) });
 }
 function T2() {
-  return /* @__PURE__ */ t("div", { className: "size-full", children: [
+  const [modalOpen, setModalOpen] = L(false);
+  return /* @__PURE__ */ e(ModalContext.Provider, { value: { open: modalOpen, setOpen: setModalOpen }, children: /* @__PURE__ */ t("div", { className: "size-full", children: [
+    /* @__PURE__ */ e(PasswordModal, {}),
     /* @__PURE__ */ e(I2, {}),
     /* @__PURE__ */ e("div", { className: "md:hidden", children: /* @__PURE__ */ e($2, {}) }),
     /* @__PURE__ */ e("div", { className: "hidden md:block", children: /* @__PURE__ */ e(R1, {}) })
-  ] });
+  ] }) });
 }
 
 export default T2;
