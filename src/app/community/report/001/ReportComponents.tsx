@@ -7,6 +7,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
 
 // React hooks & utilities
@@ -181,9 +182,24 @@ function T() {
   ] }) }) }) });
 }
 function H() {
-  return /* @__PURE__ */ t("div", { className: "h-[49.429px] relative shrink-0 w-[382px]", "data-name": "HuddingClubLogo", children: [
-    /* @__PURE__ */ e(I, {}),
-    /* @__PURE__ */ e(T, {})
+  return /* @__PURE__ */ t("div", { className: "relative shrink-0", style: { background: "transparent" }, "data-name": "HuddingClubLogoWrapper", children: [
+    /* @__PURE__ */ e("img", {
+      src: "/community/report/001/lofo.svg",
+      alt: "",
+      width: 380,
+      height: 297,
+      style: { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 0, background: "transparent" }
+    }),
+    /* @__PURE__ */ e("div", { className: "h-[49.429px] w-[382px] relative", style: { zIndex: 1, background: "transparent" }, "data-name": "HuddingClubLogo", children:
+      /* @__PURE__ */ e(Image, {
+        src: "/community/report/001/Logo.svg",
+        alt: "Huddling Club",
+        width: 382,
+        height: 49,
+        priority: true,
+        style: { background: "transparent", filter: "brightness(0) invert(1)" }
+      })
+    })
   ] });
 }
 function D() {
@@ -194,7 +210,6 @@ function D() {
 }
 function F() {
   return /* @__PURE__ */ t("div", { className: "bg-black content-stretch flex flex-col gap-[24px] items-center justify-center px-[366px] relative size-full", "data-name": "Header", children: [
-    /* @__PURE__ */ e($, {}),
     /* @__PURE__ */ e(H, {}),
     /* @__PURE__ */ e(D, {})
   ] });
@@ -244,10 +259,15 @@ function O() {
   ] }) }) }) });
 }
 function G() {
-  return /* @__PURE__ */ t("div", { className: "h-[26px] relative shrink-0 w-[200px]", "data-name": "HuddingClubLogo", children: [
-    /* @__PURE__ */ e(U, {}),
-    /* @__PURE__ */ e(O, {})
-  ] });
+  return /* @__PURE__ */ e("div", { className: "h-[26px] relative shrink-0 w-[200px]", style: { background: "transparent" }, "data-name": "HuddingClubLogo", children:
+    /* @__PURE__ */ e(Image, {
+      src: "/community/report/001/Logo.svg",
+      alt: "Huddling Club",
+      width: 200,
+      height: 26,
+      style: { background: "transparent", filter: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" }
+    })
+  });
 }
 function Q() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[4px] items-center justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[14px] text-center w-full", "data-name": "Newsletter Info", children: [
@@ -770,9 +790,24 @@ function H1() {
   ] }) }) }) });
 }
 function D1() {
-  return /* @__PURE__ */ t("div", { className: "h-[29.761px] relative shrink-0 w-[230px]", "data-name": "HuddingClubLogo", children: [
-    /* @__PURE__ */ e(T1, {}),
-    /* @__PURE__ */ e(H1, {})
+  return /* @__PURE__*/ t("div", { className: "relative shrink-0", style: { background: "transparent" }, "data-name": "HuddingClubLogoWrapper", children: [
+    /* @__PURE__ */ e("img", {
+      src: "/community/report/001/lofo.svg",
+      alt: "",
+      width: 200,
+      height: 156,
+      style: { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 0, background: "transparent" }
+    }),
+    /* @__PURE__ */ e("div", { className: "h-[29.761px] w-[230px] relative", style: { zIndex: 1, background: "transparent" }, "data-name": "HuddingClubLogo", children:
+      /* @__PURE__ */ e(Image, {
+        src: "/community/report/001/Logo.svg",
+        alt: "Huddling Club",
+        width: 230,
+        height: 30,
+        priority: true,
+        style: { background: "transparent", filter: "brightness(0) invert(1)" }
+      })
+    })
   ] });
 }
 function F1() {
@@ -783,7 +818,6 @@ function F1() {
 }
 function U1() {
   return /* @__PURE__ */ t("div", { className: "bg-black content-stretch flex flex-col gap-[12px] items-center justify-center overflow-hidden relative size-full", "data-name": "Header", children: [
-    /* @__PURE__ */ e(I1, {}),
     /* @__PURE__ */ e(D1, {}),
     /* @__PURE__ */ e(F1, {})
   ] });
@@ -833,10 +867,15 @@ function G1() {
   ] }) }) }) });
 }
 function Q1() {
-  return /* @__PURE__ */ t("div", { className: "h-[20px] relative shrink-0 w-[160px]", "data-name": "HuddingClubLogo", children: [
-    /* @__PURE__ */ e(O1, {}),
-    /* @__PURE__ */ e(G1, {})
-  ] });
+  return /* @__PURE__ */ e("div", { className: "h-[20px] relative shrink-0 w-[160px]", style: { background: "transparent" }, "data-name": "HuddingClubLogo", children:
+    /* @__PURE__ */ e(Image, {
+      src: "/community/report/001/Logo.svg",
+      alt: "Huddling Club",
+      width: 160,
+      height: 20,
+      style: { background: "transparent", filter: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" }
+    })
+  });
 }
 function W1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col font-['Pretendard_Variable',sans-serif] gap-[4px] items-center justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] text-center w-full", "data-name": "Newsletter Info", children: [
