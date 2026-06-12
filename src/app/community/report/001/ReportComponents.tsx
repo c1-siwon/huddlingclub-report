@@ -49,6 +49,9 @@ const r3 = (React as any).use || (() => { throw new Error("use is not available"
 // 비밀번호 모달 Context
 const ModalContext = U2({ open: false, setOpen: (v: boolean) => {} });
 
+// 비디오 시간 이동 Context
+const VideoContext = U2({ startTime: 6, setStartTime: (v: number) => {}, isPlaying: false, setIsPlaying: (v: boolean) => {} });
+
 function PasswordModal() {
   const { open, setOpen } = n3(ModalContext);
   const [pw, setPw] = L("");
@@ -375,7 +378,7 @@ function J() {
   ] });
 }
 function K() {
-  return /* @__PURE__ */ e("div", { className: "-translate-x-1/2 absolute h-[59.241px] left-1/2 top-[9.5px] w-[52px]", "data-name": "logo", children: /* @__PURE__ */ t("svg", { className: "absolute block inset-0 size-full", fill: "none", preserveAspectRatio: "none", viewBox: "0 0 52 59.2405", children: [
+  return /* @__PURE__ */ e("div", { className: "absolute h-[59.241px] left-[4px] top-[9.5px] w-[52px]", "data-name": "logo", children: /* @__PURE__ */ t("svg", { className: "absolute block inset-0 size-full", fill: "none", preserveAspectRatio: "none", viewBox: "0 0 52 59.2405", children: [
     /* @__PURE__ */ t("g", { clipPath: "url(#clip0_1_288)", id: "logo", children: [
       /* @__PURE__ */ e("path", { d: m.p28229840, fill: "var(--fill-0, black)", id: "Vector" }),
       /* @__PURE__ */ e("path", { d: m.p2c81600, fill: "var(--fill-0, #131313)", id: "Vector_2" }),
@@ -421,7 +424,7 @@ function a1() {
   ] });
 }
 function r1() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 시원입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
 }
 function i1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
@@ -436,7 +439,7 @@ function n1() {
   ] });
 }
 function s1() {
-  return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: R }) });
+  return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: R }) });
 }
 function c1() {
   return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.' }) }) });
@@ -525,20 +528,33 @@ function v1() {
   ] });
 }
 function b1() {
-  const [P, Q] = L(!1);
+  const { startTime, isPlaying, setIsPlaying } = n3(VideoContext);
   return /* @__PURE__ */ t("div", { className: "bg-[#0a0d12] h-[319px] relative rounded-[16px] shrink-0 w-full max-w-[560px] overflow-hidden", "data-name": "div.video", children: [
-    P ? /* @__PURE__ */ e("iframe", { src: "https://www.youtube.com/embed/a-wzqVa_nLM?start=6&rel=0&autoplay=1", title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => Q(!0), children: [
+    isPlaying ? /* @__PURE__ */ e("iframe", { src: `https://www.youtube.com/embed/a-wzqVa_nLM?start=${startTime}&rel=0&autoplay=1`, title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => setIsPlaying(!0), children: [
       /* @__PURE__ */ e("img", { src: "https://img.youtube.com/vi/a-wzqVa_nLM/maxresdefault.jpg", alt: "동영상 썸네일", className: "absolute inset-0 w-full h-full object-cover" }),
       /* @__PURE__ */ e("div", { className: "absolute inset-0 flex items-center justify-center", style: { background: "rgba(0,0,0,0.25)" }, children: /* @__PURE__ */ e("div", { style: { width: 64, height: 64, borderRadius: "50%", background: "rgba(255,255,255,0.9)", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", width: 32, height: 32, children: /* @__PURE__ */ e("path", { d: "M8 5v14l11-7z", fill: "#FF0000" }) }) }) })
     ] }),
-    !P && /* @__PURE__ */ e(v1, {}),
+    !isPlaying && /* @__PURE__ */ e(v1, {}),
     /* @__PURE__ */ e("div", { "aria-hidden": !0, className: "absolute border border-[rgba(112,115,124,0.26)] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_14px_40px_0px_rgba(20,30,60,0.14)]" })
   ] });
 }
+function parseTime(timeStr) {
+  const parts = timeStr.split(":").map(Number);
+  if (parts.length === 2) return parts[0] * 60 + parts[1];
+  if (parts.length === 3) return parts[0] * 3600 + parts[1] * 60 + parts[2];
+  return 0;
+}
 function y(s, C) {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[4px] items-center relative shrink-0", children: [
+  const { setStartTime, setIsPlaying } = n3(VideoContext);
+  const handleClick = () => {
+    const seconds = parseTime(s);
+    setStartTime(seconds);
+    setIsPlaying(true);
+    document.getElementById("desktop-section-monthly-live")?.scrollIntoView({ behavior: "smooth" });
+  };
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[4px] items-center relative shrink-0 cursor-pointer", onClick: handleClick, children: [
     /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: C }) }) }),
-    /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) })
+    /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0 hover:bg-[#e0e7ff] transition-colors", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) })
   ] });
 }
 function w1() {
@@ -602,48 +618,47 @@ function j1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
     /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "AI News" }) }) }),
     /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "실무에 바로 영향을 주는 소식만 골랐어요." }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "클럽 멤버들이 디스코드에서 가장 많이 이야기한 6가지." })
-    ] }) })
+    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children:
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." })
+    }) })
   ] });
 }
 const j = [
   {
-    badge: "MODEL",
+    badge: "Agent",
     date: "2026.07.01",
-    title: "긴 문서·이미지·표를 한 번에 읽는 새 멀티모달 모델 공개",
-    description: "수백 페이지 PDF와 스크린샷을 함께 입력해도 표·그래프 맥락을 유지한다는 점이 리서치·기획 직군에서 화제. 수백 페이지 PDF와 스크린샷을 함께 입력해도 표·그래프 맥락을 유지한다는 점이 리서치·기획 직군에서 화제."
+    title: "Claude Code, 터미널에서 바로 쓰는 AI 코딩 에이전트 정식 출시",
+    description: "CLI 환경에서 코드 작성·리팩토링·디버깅을 자동화하는 새로운 워크플로우가 개발자 커뮤니티에서 빠르게 확산 중. 기존 IDE 플러그인 대비 컨텍스트 유지 능력이 뛰어나다는 평가."
   },
   {
-    badge: "AGENT",
-    date: "2026.07.01",
-    title: '"이슈만 던지면 PR까지" 코딩 에이전트, 실사용 후기 쏟아져',
-    description: "작은 버그 수정·테스트 작성은 맡길 만하지만, 설계 판단은 여전히 사람 몫이라는 게 멤버들의 공통 결론. 작은 버그 수정·테스트 작성은 맡길 만하지만, 설계 판단은 여전히 사람 몫이라는 게 멤버들의 공통 결론."
+    badge: "Model",
+    date: "2026.06.30",
+    title: "GPT-5 Turbo 공개, 추론 속도 2배·비용 절반으로 낮춰",
+    description: "실시간 대화형 서비스에 적합하도록 latency를 대폭 개선. 스타트업과 중소기업의 AI 도입 장벽이 한층 낮아질 전망이라는 분석이 나오고 있다."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "디자인 툴에 '텍스트 → 프로토타입' 기능 정식 탑재",
-    description: "와이어프레임 단계가 크게 짧아지는 대신, 의도를 글로 정리하는 역량이 더 중요해졌다는 평가가 쏟아졌다. 와이어프레임 단계가 크게 짧아지는 대신, 의도를 글로 정리하는 역량이 더 중요해졌다는 평가."
+    badge: "Product",
+    date: "2026.06.29",
+    title: "Figma AI, 디자인 시스템 자동 생성 기능 베타 오픈",
+    description: "브랜드 가이드라인만 입력하면 컴포넌트·컬러·타이포그래피를 자동 세팅. 디자이너들 사이에서 '초기 세팅 시간 80% 단축' 후기가 쏟아지고 있다."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "노코드 AI 빌더, 월 사용자 100만 돌파 — 실무 활용 사례 급증",
-    description: "복잡한 코드 없이도 워크플로우 자동화가 가능해지면서, 비개발직군의 AI 도입 속도가 빨라지고 있다. 복잡한 코드 없이도 워크플로우 자동화가 가능해지면서, 비개발직군의 AI 도입 속도가 빨라지고 있다."
+    badge: "Research",
+    date: "2026.06.28",
+    title: "멀티모달 AI, 영상 콘텐츠 이해도 벤치마크에서 인간 수준 첫 돌파",
+    description: "긴 영상의 맥락을 파악하고 요약하는 능력이 크게 향상. 콘텐츠 제작·마케팅 분야에서 활용 사례가 급증하고 있다."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "GPT-5 발표 후 기업 도입 문의 3배 증가, 계약 조건 변화 주목",
-    description: "엔터프라이즈 플랜 가격 정책이 바뀌면서 기존 계약 갱신 시점을 앞당기는 기업들이 늘고 있다. 엔터프라이즈 플랜 가격 정책이 바뀌면서 기존 계약 갱신 시점을 앞당기는 기업들이 늘고 있다."
+    badge: "Tool",
+    date: "2026.06.27",
+    title: "Cursor 2.0 업데이트, 멀티파일 동시 편집·자동 테스트 작성 지원",
+    description: "프로젝트 전체를 이해하고 여러 파일을 한 번에 수정하는 기능 추가. 대규모 리팩토링 작업 시간이 절반 이하로 줄었다는 사용자 피드백이 이어지고 있다."
   },
   {
-    badge: "RESEARCH",
-    date: "2026.07.01",
-    title: "AI 에이전트, 장기 계획 수립 벤치마크에서 인간 전문가 수준 첫 돌파",
-    description: "다단계 추론과 도구 활용 조합으로 기존 한계를 넘어섰다는 평가가 나왔다. 실무 적용 가능성에 대한 논의가 커뮤니티에서 활발히 이어지고 있다."
+    badge: "Workflow",
+    date: "2026.06.26",
+    title: "Notion AI, 문서 기반 자동 태스크 생성·일정 연동 기능 출시",
+    description: "회의록이나 기획서를 분석해 액션 아이템을 자동 추출하고 캘린더에 등록. PM/기획자들의 반복 업무가 크게 줄어들 것으로 기대된다."
   }
 ];
 function A({ badge: s, date: C, title: c, description: o }) {
@@ -671,8 +686,7 @@ function B1() {
   const s = j.slice(0, 3), C = j.slice(3, 6);
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full", "data-name": "AI News Details Container", children: [
     /* @__PURE__ */ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: s.map((c, o) => /* @__PURE__ */ e(A, { badge: c.badge, date: c.date, title: c.title, description: c.description }, o)) }),
-    /* @__PURE__ */ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: C.map((c, o) => /* @__PURE__ */ e(A, { badge: c.badge, date: c.date, title: c.title, description: c.description }, o + 3)) }),
-    /* @__PURE__ */ e(A1, {})
+    /* @__PURE__*/ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: C.map((c, o) => /* @__PURE__ */ e(A, { badge: c.badge, date: c.date, title: c.title, description: c.description }, o + 3)) })
   ] });
 }
 function Z1() {
@@ -683,8 +697,12 @@ function Z1() {
 }
 function P1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "헤드라인이 들어가는 영역입니다." }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "디스크립션 내용이 들어가는 영역입니다." }) }) })
+    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Get Involved" }) }) }),
+    /* @__PURE__ */ e(l, { delay: 35, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "저희랑 함께 성장하실래요?" }) }) }),
+    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
+      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "검증된 경험을 배우고 공유하며" }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "순환하는 허들링 클럽에서 함께 성장해봐요" })
+    ] }) })
   ] });
 }
 function AA1() {
@@ -991,7 +1009,7 @@ function K1() {
   ] });
 }
 function X1() {
-  return /* @__PURE__ */ e("div", { className: "-translate-x-1/2 absolute h-[59.241px] left-1/2 top-[9.5px] w-[52px]", "data-name": "logo", children: /* @__PURE__ */ t("svg", { className: "absolute block inset-0 size-full", fill: "none", preserveAspectRatio: "none", viewBox: "0 0 52 59.2405", children: [
+  return /* @__PURE__ */ e("div", { className: "absolute h-[36.5px] left-[4px] top-[9px] w-[32px]", "data-name": "logo", children: /* @__PURE__ */ t("svg", { className: "absolute block inset-0 size-full", fill: "none", preserveAspectRatio: "none", viewBox: "0 0 52 59.2405", children: [
     /* @__PURE__ */ t("g", { clipPath: "url(#clip0_1_288)", id: "logo", children: [
       /* @__PURE__ */ e("path", { d: u.p28229840, fill: "var(--fill-0, black)", id: "Vector" }),
       /* @__PURE__ */ e("path", { d: u.p2c81600, fill: "var(--fill-0, #131313)", id: "Vector_2" }),
@@ -1037,7 +1055,7 @@ function r2() {
   ] });
 }
 function i2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 시원입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
 }
 function n2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
@@ -1052,7 +1070,7 @@ function s2() {
   ] });
 }
 function c2() {
-  return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: S1 }) });
+  return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: S1 }) });
 }
 function d2() {
   return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.' }) }) });
@@ -1144,20 +1162,27 @@ function b2() {
   ] });
 }
 function w2() {
-  const [P, Q] = L(!1);
+  const { startTime, isPlaying, setIsPlaying } = n3(VideoContext);
   return /* @__PURE__ */ t("div", { className: "aspect-[556/318.760009765625] bg-[#0a0d12] relative rounded-[16px] shrink-0 w-full overflow-hidden", "data-name": "div.video", children: [
-    P ? /* @__PURE__ */ e("iframe", { src: "https://www.youtube.com/embed/a-wzqVa_nLM?start=6&rel=0&autoplay=1", title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => Q(!0), children: [
+    isPlaying ? /* @__PURE__ */ e("iframe", { src: `https://www.youtube.com/embed/a-wzqVa_nLM?start=${startTime}&rel=0&autoplay=1`, title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => setIsPlaying(!0), children: [
       /* @__PURE__ */ e("img", { src: "https://img.youtube.com/vi/a-wzqVa_nLM/maxresdefault.jpg", alt: "동영상 썸네일", className: "absolute inset-0 w-full h-full object-cover" }),
       /* @__PURE__ */ e("div", { className: "absolute inset-0 flex items-center justify-center", style: { background: "rgba(0,0,0,0.25)" }, children: /* @__PURE__ */ e("div", { style: { width: 64, height: 64, borderRadius: "50%", background: "rgba(255,255,255,0.9)", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", width: 32, height: 32, children: /* @__PURE__ */ e("path", { d: "M8 5v14l11-7z", fill: "#FF0000" }) }) }) })
     ] }),
-    !P && /* @__PURE__ */ e(b2, {}),
+    !isPlaying && /* @__PURE__ */ e(b2, {}),
     /* @__PURE__ */ e("div", { "aria-hidden": !0, className: "absolute border border-[rgba(112,115,124,0.26)] border-solid inset-0 pointer-events-none rounded-[16px] shadow-[0px_14px_40px_0px_rgba(20,30,60,0.14)]" })
   ] });
 }
 function _(s, C) {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[4px] items-center relative shrink-0 w-full", children: [
+  const { setStartTime, setIsPlaying } = n3(VideoContext);
+  const handleClick = () => {
+    const seconds = parseTime(s);
+    setStartTime(seconds);
+    setIsPlaying(true);
+    document.getElementById("section-monthly-live")?.scrollIntoView({ behavior: "smooth" });
+  };
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[4px] items-center relative shrink-0 w-full cursor-pointer", onClick: handleClick, children: [
     /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: C }) }) }),
-    /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) })
+    /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0 hover:bg-[#e0e7ff] transition-colors", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) })
   ] });
 }
 function g2() {
@@ -1221,48 +1246,47 @@ function A2() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
     /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "AI News" }) }) }),
     /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "실무에 바로 영향을 주는 소식만 골랐어요." }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "클럽 멤버들이 디스코드에서 가장 많이 이야기한 6가지." })
-    ] }) })
+    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children:
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." })
+    }) })
   ] });
 }
 const B2 = [
   {
-    badge: "MODEL",
+    badge: "Agent",
     date: "2026.07.01",
-    title: "긴 문서·이미지·표를 한 번에 읽는 새 멀티모달 모델 공개",
-    description: "수백 페이지 PDF와 스크린샷을 함께 입력해도 표·그래프 맥락을 유지한다는 점이 리서치·기획 직군에서 화제. 수백 페이지 PDF와 스크린샷을 함께 입력해도 표·그래프 맥락을 유지한다는 점이 리서치·기획 직군에서 화제."
+    title: "Claude Code, 터미널에서 바로 쓰는 AI 코딩 에이전트 정식 출시",
+    description: "CLI 환경에서 코드 작성·리팩토링·디버깅을 자동화하는 새로운 워크플로우가 개발자 커뮤니티에서 빠르게 확산 중."
   },
   {
-    badge: "AGENT",
-    date: "2026.07.01",
-    title: '"이슈만 던지면 PR까지" 코딩 에이전트, 실사용 후기 쏟아져',
-    description: "작은 버그 수정·테스트 작성은 맡길 만하지만, 설계 판단은 여전히 사람 몫이라는 게 멤버들의 공통 결론. 작은 버그 수정·테스트 작성은 맡길 만하지만, 설계 판단은 여전히 사람 몫이라는 게 멤버들의 공통 결론."
+    badge: "Model",
+    date: "2026.06.30",
+    title: "GPT-5 Turbo 공개, 추론 속도 2배·비용 절반으로 낮춰",
+    description: "실시간 대화형 서비스에 적합하도록 latency를 대폭 개선. 스타트업의 AI 도입 장벽이 낮아질 전망."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "디자인 툴에 '텍스트 → 프로토타입' 기능 정식 탑재",
-    description: "와이어프레임 단계가 크게 짧아지는 대신, 의도를 글로 정리하는 역량이 더 중요해졌다는 평가가 쏟아졌다. 와이어프레임 단계가 크게 짧아지는 대신, 의도를 글로 정리하는 역량이 더 중요해졌다는 평가."
+    badge: "Product",
+    date: "2026.06.29",
+    title: "Figma AI, 디자인 시스템 자동 생성 기능 베타 오픈",
+    description: "브랜드 가이드라인만 입력하면 컴포넌트·컬러·타이포그래피를 자동 세팅. 초기 세팅 시간 80% 단축."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "노코드 AI 빌더, 월 사용자 100만 돌파 — 실무 활용 사례 급증",
-    description: "복잡한 코드 없이도 워크플로우 자동화가 가능해지면서, 비개발직군의 AI 도입 속도가 빨라지고 있다. 복잡한 코드 없이도 워크플로우 자동화가 가능해지면서, 비개발직군의 AI 도입 속도가 빨라지고 있다."
+    badge: "Research",
+    date: "2026.06.28",
+    title: "멀티모달 AI, 영상 콘텐츠 이해도 벤치마크에서 인간 수준 첫 돌파",
+    description: "긴 영상의 맥락을 파악하고 요약하는 능력이 크게 향상. 콘텐츠 제작·마케팅 분야에서 활용 사례 급증."
   },
   {
-    badge: "PRODUCT",
-    date: "2026.07.01",
-    title: "GPT-5 발표 후 기업 도입 문의 3배 증가, 계약 조건 변화 주목",
-    description: "엔터프라이즈 플랜 가격 정책이 바뀌면서 기존 계약 갱신 시점을 앞당기는 기업들이 늘고 있다. 엔터프라이즈 플랜 가격 정책이 바뀌면서 기존 계약 갱신 시점을 앞당기는 기업들이 늘고 있다."
+    badge: "Tool",
+    date: "2026.06.27",
+    title: "Cursor 2.0 업데이트, 멀티파일 동시 편집·자동 테스트 작성 지원",
+    description: "프로젝트 전체를 이해하고 여러 파일을 한 번에 수정하는 기능 추가. 리팩토링 시간이 절반 이하로 감소."
   },
   {
-    badge: "RESEARCH",
-    date: "2026.07.01",
-    title: "AI 에이전트, 장기 계획 수립 벤치마크에서 인간 전문가 수준 첫 돌파",
-    description: "다단계 추론과 도구 활용 조합으로 기존 한계를 넘어섰다는 평가가 나왔다. 실무 적용 가능성에 대한 논의가 커뮤니티에서 활발히 이어지고 있다."
+    badge: "Workflow",
+    date: "2026.06.26",
+    title: "Notion AI, 문서 기반 자동 태스크 생성·일정 연동 기능 출시",
+    description: "회의록이나 기획서를 분석해 액션 아이템을 자동 추출하고 캘린더에 등록."
   }
 ];
 function Z2() {
@@ -1281,10 +1305,9 @@ function P2() {
   return /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[14px] text-center text-white", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "AI 핫이슈 더보기" }) }) }) }) });
 }
 function z2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "AI News Details Container", children: [
-    /* @__PURE__ */ e(Z2, {}),
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-start px-[20px] relative shrink-0 w-full", children: /* @__PURE__ */ e(P2, {}) })
-  ] });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "AI News Details Container", children:
+    /* @__PURE__ */ e(Z2, {})
+  });
 }
 function R2() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "AI News Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center px-[20px] py-[60px] relative size-full", children: [
@@ -1294,8 +1317,12 @@ function R2() {
 }
 function S2() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "헤드라인이 들어가는 영역입니다." }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "디스크립션 내용이 들어가는 영역입니다." }) }) })
+    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Get Involved" }) }) }),
+    /* @__PURE__ */ e(l, { delay: 35, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "저희랑 함께 성장하실래요?" }) }) }),
+    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
+      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "검증된 경험을 배우고 공유하며" }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "순환하는 허들링 클럽에서 함께 성장해봐요" })
+    ] }) })
   ] });
 }
 function D2() {
@@ -1344,12 +1371,16 @@ function I2() {
 }
 function T2() {
   const [modalOpen, setModalOpen] = L(false);
-  return /* @__PURE__ */ e(ModalContext.Provider, { value: { open: modalOpen, setOpen: setModalOpen }, children: /* @__PURE__ */ t("div", { className: "size-full", children: [
-    /* @__PURE__ */ e(PasswordModal, {}),
-    /* @__PURE__ */ e(I2, {}),
-    /* @__PURE__ */ e("div", { className: "md:hidden", children: /* @__PURE__ */ e($2, {}) }),
-    /* @__PURE__ */ e("div", { className: "hidden md:block", children: /* @__PURE__ */ e(R1, {}) })
-  ] }) });
+  const [startTime, setStartTime] = L(6);
+  const [isPlaying, setIsPlaying] = L(false);
+  return /* @__PURE__ */ e(ModalContext.Provider, { value: { open: modalOpen, setOpen: setModalOpen }, children:
+    /* @__PURE__ */ e(VideoContext.Provider, { value: { startTime, setStartTime, isPlaying, setIsPlaying }, children: /* @__PURE__ */ t("div", { className: "size-full", children: [
+      /* @__PURE__ */ e(PasswordModal, {}),
+      /* @__PURE__ */ e(I2, {}),
+      /* @__PURE__ */ e("div", { className: "md:hidden", children: /* @__PURE__ */ e($2, {}) }),
+      /* @__PURE__ */ e("div", { className: "hidden md:block", children: /* @__PURE__ */ e(R1, {}) })
+    ] }) })
+  });
 }
 
 export default T2;
