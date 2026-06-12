@@ -1,0 +1,51 @@
+/*
+  report.css
+  순수 React 컴포넌트를 위한 커스텀 레이아웃 보정 스타일.
+*/
+
+img {
+  background-color: #f5f5f5;
+}
+
+/* 모바일: section-monthly-live와 애니메이션 래퍼 모두 full width */
+@media (max-width: 767px) {
+  #section-monthly-live,
+  #section-monthly-live > div {
+    width: 100% !important;
+  }
+}
+
+/* 데스크톱: 섹션 래퍼가 items-center 컨텍스트에서 shrink-to-fit 되지 않도록 */
+@media (min-width: 768px) {
+  #desktop-section-best-report,
+  #desktop-section-monthly-live {
+    width: 100% !important;
+  }
+
+  #desktop-section-monthly-live [data-name="Monthly Live Video Container"] {
+    max-width: 560px !important;
+    width: 100% !important;
+    align-self: center !important;
+  }
+
+  #desktop-section-monthly-live [data-name="Monthly Live Takeaways Container"] {
+    max-width: 560px !important;
+    width: 100% !important;
+  }
+
+  #desktop-section-monthly-live [data-name="div.video"] {
+    max-width: 560px !important;
+    width: 100% !important;
+  }
+
+  #desktop-section-monthly-live [data-name="div.card"] {
+    max-width: 560px !important;
+    width: 100% !important;
+  }
+}
+
+/* live 인디케이터 점 깜빡임 애니메이션 */
+@keyframes live-dot-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
