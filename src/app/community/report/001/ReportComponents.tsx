@@ -283,7 +283,7 @@ function Y() {
       "div",
       {
         className: `sticky top-0 z-50 w-full shrink-0 transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
-        children: /* @__PURE__ */ e("div", { className: s ? "flex items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[12px]" : "flex items-center justify-center py-[16px]", children: /* @__PURE__ */ e("div", { className: s ? "flex gap-[12px] items-center" : "backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)] flex gap-[12px] items-center", children: M.map((a, d) => {
+        children: /* @__PURE__ */ e("div", { className: s ? "flex items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[12px] overflow-x-auto [&::-webkit-scrollbar]:hidden" : "flex items-center justify-center py-[16px] overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none" }, children: /* @__PURE__ */ e("div", { className: s ? "flex gap-[12px] items-center w-fit mx-auto" : "backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)] flex gap-[12px] items-center w-fit mx-auto", children: M.map((a, d) => {
           const r = c === d;
           return /* @__PURE__ */ e(
             "button",
@@ -854,7 +854,7 @@ function J1() {
       "div",
       {
         className: `sticky top-0 z-50 w-full transition-all duration-200 ${s ? "backdrop-blur-[10px] bg-[rgba(255,255,255,0.85)] border-b border-[#e5e7eb]/60" : "bg-transparent"}`,
-        children: /* @__PURE__ */ e("div", { className: "overflow-x-auto w-full [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none" }, children: /* @__PURE__ */ e("div", { className: `flex gap-[12px] items-center py-[12px] w-max ${s ? "px-[20px]" : "px-[20px] backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)]"}`, children: B.map((a, d) => {
+        children: /* @__PURE__ */ e("div", { className: "flex justify-center w-full overflow-x-auto [&::-webkit-scrollbar]:hidden", style: { scrollbarWidth: "none" }, children: /* @__PURE__ */ e("div", { className: `flex gap-[12px] items-center py-[12px] w-fit ${s ? "px-[20px]" : "px-[20px] backdrop-blur-[5px] bg-[rgba(255,255,255,0.2)]"}`, children: B.map((a, d) => {
           const r = c === d;
           return /* @__PURE__ */ e(
             "button",
