@@ -71,17 +71,18 @@ function PasswordModal() {
     /* @__PURE__ */ t("div", { className: "relative bg-white rounded-[16px] p-[32px] max-w-[400px] w-[90%] flex flex-col gap-[20px]", children: [
       /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(false), className: "absolute top-[16px] right-[16px] text-[#9ca3af] hover:text-[#131313] text-[20px] cursor-pointer", children: "×" }),
       /* @__PURE__ */ t("div", { className: "flex flex-col gap-[8px] text-center", children: [
-        /* @__PURE__ */ e("h2", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[20px] text-[#131313]", children: "구독 회원 전용 콘텐츠입니다" }),
-        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[14px] text-[#4b5563]", children: "구독 회원은 비밀번호를 입력해 전체 콘텐츠를 확인하세요." })
+        /* @__PURE__ */ e("h2", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[20px] text-[#131313]", children: "멤버 전용 콘텐츠입니다" }),
+        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[14px] text-[#4b5563]", children: "허들링 멤버는 비밀번호를 입력해 전체 콘텐츠를 확인하세요." })
       ] }),
       /* @__PURE__ */ t("div", { className: "flex flex-col gap-[12px]", children: [
         /* @__PURE__ */ e("input", { type: "password", value: pw, onChange: (ev) => { setPw(ev.target.value); setError(""); }, placeholder: "비밀번호 입력", className: "w-full border border-[#e5e7eb] rounded-[8px] px-[16px] py-[12px] font-['Pretendard_Variable',sans-serif] text-[14px] outline-none focus:border-[#0058e0]" }),
         error && /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[13px] text-[#ef4444]", children: error }),
         /* @__PURE__ */ e("button", { type: "button", onClick: handleSubmit, className: "w-full bg-[#0058e0] text-white font-['Pretendard_Variable',sans-serif] font-bold text-[14px] py-[12px] rounded-[8px] cursor-pointer hover:opacity-90 active:opacity-75", children: "확인" })
       ] }),
-      /* @__PURE__ */ t("div", { className: "flex flex-col gap-[8px] text-center pt-[8px] border-t border-[#e5e7eb]", children: [
-        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[13px] text-[#9ca3af]", children: "아직 구독 회원이 아니신가요?" }),
-        /* @__PURE__ */ e("button", { type: "button", className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#0058e0] cursor-pointer hover:underline", children: "구독 신청하기" })
+      /* @__PURE__ */ e("div", { className: "w-full border-t border-[#e5e7eb] mt-[20px] mb-[20px]" }),
+      /* @__PURE__ */ t("div", { className: "flex flex-col gap-[8px] text-center", children: [
+        /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[13px] text-[#9ca3af]", children: "아직 허들링 멤버가 아니신가요?" }),
+        /* @__PURE__ */ e("button", { type: "button", className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#0058e0] cursor-pointer hover:underline", children: "멤버 가입하기" })
       ] })
     ] })
   ] }) });
