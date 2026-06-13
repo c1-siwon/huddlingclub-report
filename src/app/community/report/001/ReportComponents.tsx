@@ -729,7 +729,13 @@ function k1() {
 }
 function y1() {
   const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] content-stretch flex items-center justify-center px-[18px] py-[13px] relative rounded-[12px] shrink-0 w-full max-w-[560px] cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "영상 풀 버전 보러가기" }) }) });
+  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ t(Z, { children: [
+    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+      /* @__PURE__ */ e(CrownIcon, {}),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
+    ] }),
+    /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-white", children: "영상 풀 버전 보러가기" })
+  ] }) });
 }
 function _1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
@@ -1382,7 +1388,13 @@ function y2() {
 }
 function _2() {
   const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] min-w-px relative text-[14px] text-center text-white", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "영상 풀 버전 보러가기" }) }) }) }) });
+  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ t(Z, { children: [
+    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+      /* @__PURE__ */ e(CrownIcon, {}),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
+    ] }),
+    /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-white", children: "영상 풀 버전 보러가기" })
+  ] }) });
 }
 function V2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
