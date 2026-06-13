@@ -434,10 +434,71 @@ function t1() {
     /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
+function LinkedInIcon() {
+  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
+    /* @__PURE__ */ e("path", { d: "M13.5 0H2.5C1.11929 0 0 1.11929 0 2.5V13.5C0 14.8807 1.11929 16 2.5 16H13.5C14.8807 16 16 14.8807 16 13.5V2.5C16 1.11929 14.8807 0 13.5 0Z", fill: "#0966C2" }),
+    /* @__PURE__ */ e("path", { d: "M5.16718 12.9317H2.97813V6.0427H5.16718V12.9317ZM4.07265 5.07695C3.36443 5.07695 2.84937 4.56188 2.84937 3.85366C2.84937 3.14544 3.42882 2.63037 4.07265 2.63037C4.78087 2.63037 5.29594 3.14544 5.29594 3.85366C5.29594 4.56188 4.78087 5.07695 4.07265 5.07695ZM13.1507 12.9317H10.9617V9.19749C10.9617 8.10297 10.511 7.78106 9.86717 7.78106C9.22333 7.78106 8.5795 8.29612 8.5795 9.26188V12.9317H6.39046V6.0427H8.45073V7.00845C8.64388 6.55777 9.41648 5.84955 10.511 5.84955C11.7343 5.84955 13.022 6.55777 13.022 8.68243V12.9317H13.1507Z", fill: "white" })
+  ] });
+}
+function InstagramIcon() {
+  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
+    /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.63734 15.9921C3.28051 15.9794 2.82063 15.9515 2.61161 15.9093C2.29254 15.8449 1.99122 15.7472 1.74063 15.6195C1.44622 15.4694 1.18235 15.278 0.954502 15.0505C0.726136 14.8226 0.533931 14.5585 0.383286 14.2636C0.255926 14.0144 0.158289 13.7149 0.0935818 13.3976C0.0505441 13.1865 0.0220805 12.7232 0.00917738 12.3641C0.0039449 12.2173 0.00126018 12.0273 0.00126018 11.9397L0 4.06152C0 3.97427 0.00265733 3.78426 0.00786241 3.63731C0.0205464 3.28051 0.048462 2.82063 0.0906779 2.61161C0.155084 2.29256 0.252802 1.99122 0.380491 1.74063C0.530562 1.44619 0.721972 1.18237 0.949461 0.954502C1.17739 0.726163 1.44153 0.533959 1.73636 0.383286C1.98563 0.255953 2.28511 0.158289 2.60235 0.0935818C2.81348 0.0505441 3.27682 0.0220805 3.63594 0.00920477C3.78267 0.0039449 3.97265 0.00126018 4.06026 0.00126018L11.9384 0C12.0257 0 12.2157 0.00262993 12.3626 0.00786241C12.7195 0.0205738 13.1794 0.048462 13.3884 0.0906779C13.7074 0.155111 14.0088 0.25283 14.2593 0.380491C14.5538 0.530562 14.8176 0.721999 15.0455 0.949461C15.2738 1.17742 15.466 1.44151 15.6167 1.73636C15.744 1.98563 15.8417 2.28508 15.9064 2.60235C15.9495 2.81348 15.9779 3.27684 15.9908 3.63594C15.9961 3.7827 15.9987 3.97265 15.9987 4.06026L16 11.9384C16 12.0257 15.9973 12.2157 15.9921 12.3627C15.9794 12.7195 15.9515 13.1793 15.9093 13.3884C15.8449 13.7074 15.7472 14.0088 15.6195 14.2593C15.4694 14.5538 15.278 14.8176 15.0505 15.0455C14.8226 15.2738 14.5584 15.466 14.2636 15.6167C14.0143 15.744 13.7149 15.8417 13.3976 15.9064C13.1865 15.9494 12.7232 15.9779 12.3641 15.9908C12.2173 15.9961 12.0273 15.9987 11.9397 15.9987L4.06152 16C3.97424 16 3.78423 15.9973 3.63734 15.9921Z", fill: "url(#paint0_radial_instagram)" }),
+    /* @__PURE__ */ e("mask", { id: "mask0_instagram", style: { maskType: "luminance" }, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: 16, height: 16, children:
+      /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.63734 15.9921C3.28051 15.9794 2.82063 15.9515 2.61161 15.9093C2.29254 15.8449 1.99122 15.7472 1.74063 15.6195C1.44622 15.4694 1.18235 15.278 0.954502 15.0505C0.726136 14.8226 0.533931 14.5585 0.383286 14.2636C0.255926 14.0144 0.158289 13.7149 0.0935818 13.3976C0.0505441 13.1865 0.0220805 12.7232 0.00917738 12.3641C0.0039449 12.2173 0.00126018 12.0273 0.00126018 11.9397L0 4.06152C0 3.97427 0.00265733 3.78426 0.00786241 3.63731C0.0205464 3.28051 0.048462 2.82063 0.0906779 2.61161C0.155084 2.29256 0.252802 1.99122 0.380491 1.74063C0.530562 1.44619 0.721972 1.18237 0.949461 0.954502C1.17739 0.726163 1.44153 0.533959 1.73636 0.383286C1.98563 0.255953 2.28511 0.158289 2.60235 0.0935818C2.81348 0.0505441 3.27682 0.0220805 3.63594 0.00920477C3.78267 0.0039449 3.97265 0.00126018 4.06026 0.00126018L11.9384 0C12.0257 0 12.2157 0.00262993 12.3626 0.00786241C12.7195 0.0205738 13.1794 0.048462 13.3884 0.0906779C13.7074 0.155111 14.0088 0.25283 14.2593 0.380491C14.5538 0.530562 14.8176 0.721999 15.0455 0.949461C15.2738 1.17742 15.466 1.44151 15.6167 1.73636C15.744 1.98563 15.8417 2.28508 15.9064 2.60235C15.9495 2.81348 15.9779 3.27684 15.9908 3.63594C15.9961 3.7827 15.9987 3.97265 15.9987 4.06026L16 11.9384C16 12.0257 15.9973 12.2157 15.9921 12.3627C15.9794 12.7195 15.9515 13.1793 15.9093 13.3884C15.8449 13.7074 15.7472 14.0088 15.6195 14.2593C15.4694 14.5538 15.278 14.8176 15.0505 15.0455C14.8226 15.2738 14.5584 15.466 14.2636 15.6167C14.0143 15.744 13.7149 15.8417 13.3976 15.9064C13.1865 15.9494 12.7232 15.9779 12.3641 15.9908C12.2173 15.9961 12.0273 15.9987 11.9397 15.9987L4.06152 16C3.97424 16 3.78423 15.9973 3.63734 15.9921Z", fill: "white" })
+    }),
+    /* @__PURE__ */ e("g", { mask: "url(#mask0_instagram)", children:
+      /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M8.03319 2.05811C6.42584 2.05811 6.22412 2.06517 5.59282 2.09406C4.96275 2.12308 4.53268 2.22339 4.15637 2.37057C3.7671 2.52258 3.43691 2.72593 3.10794 3.05686C2.77873 3.38767 2.57651 3.71972 2.42485 4.11104C2.27812 4.48959 2.17825 4.9222 2.14989 5.55555C2.12166 6.19039 2.11426 6.39337 2.11426 8.00973C2.11426 9.62609 2.12141 9.82832 2.15002 10.4632C2.17899 11.0968 2.27874 11.5292 2.42498 11.9077C2.57627 12.2991 2.77848 12.6312 3.10757 12.962C3.43641 13.293 3.76661 13.4969 4.15563 13.6489C4.53219 13.7961 4.96238 13.8964 5.59233 13.9254C6.22363 13.9543 6.42522 13.9614 8.03245 13.9614C9.63992 13.9614 9.84102 13.9543 10.4723 13.9254C11.1024 13.8964 11.533 13.7961 11.9095 13.6489C12.2987 13.4969 12.6284 13.293 12.9572 12.962C13.2864 12.6312 13.4886 12.2991 13.6403 11.9078C13.7858 11.5292 13.8857 11.0966 13.9153 10.4633C13.9436 9.82845 13.951 9.62609 13.951 8.00973C13.951 6.39337 13.9436 6.19052 13.9153 5.55568C13.8857 4.92208 13.7858 4.48959 13.6403 4.11117C13.4886 3.71972 13.2864 3.38767 12.9572 3.05686C12.628 2.7258 12.2988 2.52246 11.9091 2.37057C11.5318 2.22339 11.1015 2.12308 10.4715 2.09406C9.84016 2.06517 9.63918 2.05811 8.03134 2.05811H8.03319ZM7.83588 3.13051H7.83593L8.03319 3.13057C9.61341 3.13057 9.8007 3.13628 10.4247 3.16479C11.0018 3.19133 11.315 3.28829 11.5236 3.36975C11.7998 3.47763 11.9967 3.60658 12.2037 3.81489C12.4109 4.02319 12.5391 4.22158 12.6466 4.49932C12.7276 4.70887 12.8242 5.02381 12.8504 5.60409C12.8788 6.23149 12.8849 6.41996 12.8849 8.0083C12.8849 9.59664 12.8788 9.78511 12.8504 10.4125C12.824 10.9928 12.7276 11.3077 12.6466 11.5173C12.5393 11.795 12.4109 11.9928 12.2037 12.201C11.9966 12.4093 11.7999 12.5382 11.5236 12.6461C11.3152 12.7279 11.0018 12.8247 10.4247 12.8512C9.80083 12.8797 9.61341 12.8859 8.03319 12.8859C6.45284 12.8859 6.26555 12.8797 5.64165 12.8512C5.0646 12.8244 4.75141 12.7274 4.54267 12.646C4.26647 12.5381 4.06919 12.4092 3.86205 12.2008C3.6549 11.9925 3.52667 11.7947 3.41915 11.5168C3.33814 11.3072 3.2416 10.9923 3.21533 10.412C3.18697 9.78461 3.1813 9.59615 3.1813 8.00681C3.1813 6.41748 3.18697 6.23 3.21533 5.6026C3.24172 5.02232 3.33814 4.70738 3.41915 4.49759C3.52642 4.21984 3.6549 4.02146 3.86205 3.81315C4.06919 3.60484 4.26647 3.47589 4.54267 3.36777C4.75129 3.28593 5.0646 3.18922 5.64165 3.16256C6.18762 3.13776 6.39921 3.13032 7.50225 3.12908V3.13057C7.60531 3.13041 7.71617 3.13046 7.83579 3.13051H7.83584H7.83588ZM10.4822 4.83276C10.4822 4.43834 10.8003 4.11881 11.1924 4.11881V4.11856C11.5845 4.11856 11.9026 4.43846 11.9026 4.83276C11.9026 5.22705 11.5845 5.54695 11.1924 5.54695C10.8003 5.54695 10.4822 5.22705 10.4822 4.83276ZM8.03307 4.95327C6.35463 4.95334 4.99383 6.32181 4.99383 8.00968C4.99383 9.69758 6.3547 11.0655 8.03319 11.0655C9.71168 11.0655 11.0721 9.69758 11.0721 8.00968C11.0721 6.32177 9.71156 4.95327 8.03307 4.95327ZM10.006 8.00966C10.006 6.91395 9.12267 6.02579 8.03319 6.02579C6.94358 6.02579 6.06037 6.91395 6.06037 8.00966C6.06037 9.10526 6.94358 9.99354 8.03319 9.99354C9.12267 9.99354 10.006 9.10526 10.006 8.00966Z", fill: "white" })
+    }),
+    /* @__PURE__ */ e("defs", { children:
+      /* @__PURE__ */ t("radialGradient", { id: "paint0_radial_instagram", cx: 0, cy: 0, r: 1, gradientUnits: "userSpaceOnUse", gradientTransform: "translate(4.25002 17.2323) rotate(-90) scale(15.8572 15.8572)", children: [
+        /* @__PURE__ */ e("stop", { stopColor: "#FFDD55" }),
+        /* @__PURE__ */ e("stop", { offset: 0.1, stopColor: "#FFDD55" }),
+        /* @__PURE__ */ e("stop", { offset: 0.5, stopColor: "#FF543E" }),
+        /* @__PURE__ */ e("stop", { offset: 1, stopColor: "#C837AB" })
+      ] })
+    })
+  ] });
+}
+function GithubIcon() {
+  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
+    /* @__PURE__ */ e("g", { clipPath: "url(#clip0_github)", children:
+      /* @__PURE__ */ e("path", { d: "M8 0.5C12.1321 0.5 15.4999 3.93474 15.5 8.20215C15.4996 9.81909 15.0042 11.3939 14.0859 12.7051C13.1913 13.9825 11.9392 14.945 10.5 15.4697C10.5008 15.3133 10.503 15.0764 10.5049 14.7773C10.5074 14.3847 10.5098 13.8887 10.5098 13.3389C10.5097 12.8952 10.4354 12.5112 10.3076 12.1914C11.0009 12.0434 11.7049 11.7807 12.2881 11.2793C13.1158 10.5674 13.6201 9.45066 13.6201 7.77148C13.6201 6.85541 13.3351 6.08529 12.8564 5.45898C12.9713 5.01619 13.0734 4.20618 12.6855 3.21191L12.6006 2.99414L12.3799 2.91992L12.2812 3.21191C12.3696 2.94907 12.3784 2.92268 12.3789 2.91992L12.3779 2.91895H12.375C12.3737 2.91852 12.3725 2.91743 12.3711 2.91699C12.3681 2.91605 12.3646 2.91505 12.3613 2.91406C12.3549 2.91212 12.3477 2.91027 12.3398 2.9082C12.3236 2.90393 12.3041 2.89971 12.2822 2.89551C12.2384 2.8871 12.1834 2.8794 12.1172 2.87598C11.9843 2.8691 11.8087 2.87866 11.5889 2.92578C11.1863 3.0121 10.6392 3.22446 9.92969 3.69238C9.31091 3.53565 8.66411 3.45801 8.01953 3.45801C7.37417 3.45805 6.72687 3.53523 6.10742 3.69238C5.39893 3.22945 4.85377 3.01706 4.45312 2.92969C4.23445 2.88203 4.05966 2.87138 3.92773 2.87695C3.86202 2.87975 3.80718 2.88673 3.76367 2.89453C3.74209 2.89841 3.72304 2.90226 3.70703 2.90625C3.69899 2.90826 3.69119 2.91022 3.68457 2.91211C3.68145 2.913 3.67858 2.91419 3.67578 2.91504C3.67431 2.91549 3.67229 2.91558 3.6709 2.91602L3.66895 2.91699H3.66797C3.66748 2.91715 3.66736 2.91759 3.82031 3.39355L3.66699 2.91797L3.44043 2.99023L3.35449 3.21191C2.96639 4.2067 3.0677 5.01732 3.18262 5.45996C2.70395 6.08828 2.41997 6.8656 2.41992 7.77148C2.41992 9.44506 2.92081 10.5613 3.74512 11.2744C4.32676 11.7775 5.03019 12.0415 5.72363 12.1904C5.67881 12.3025 5.64184 12.4229 5.61133 12.5508C5.44031 12.6055 5.23552 12.6483 5.0293 12.6289C4.75508 12.603 4.43117 12.4716 4.15234 11.9912L4.14648 11.9814C4.05484 11.8312 3.87352 11.5723 3.61133 11.3467C3.35026 11.122 2.96464 10.8935 2.48145 10.9014C2.30049 10.9042 2.05771 10.9275 1.86914 11.0693C1.75494 11.1553 1.66046 11.286 1.63184 11.4531C1.60563 11.6067 1.64389 11.7373 1.68164 11.8223C1.75241 11.9815 1.87483 12.1021 1.95898 12.1748C2.05094 12.2542 2.155 12.3234 2.25098 12.377V12.3789C2.26489 12.3869 2.31058 12.4206 2.38086 12.502C2.44638 12.5779 2.51579 12.6735 2.58301 12.7783C2.72081 12.9932 2.82266 13.2031 2.85254 13.2812V13.2803C2.95795 13.5781 3.18797 14.027 3.72168 14.334C4.15563 14.5835 4.7372 14.7053 5.51172 14.6377C5.5126 14.774 5.51357 14.9033 5.51465 15.0205C5.51635 15.2059 5.51667 15.3595 5.51758 15.4688C4.07394 14.9493 2.81621 13.9898 1.91797 12.7119C0.995893 11.4001 0.499171 9.82186 0.5 8.20215C0.500106 3.93474 3.86791 0.5 8 0.5Z", fill: "#24292F", stroke: "#24292F" })
+    }),
+    /* @__PURE__ */ e("defs", { children:
+      /* @__PURE__ */ e("clipPath", { id: "clip0_github", children:
+        /* @__PURE__ */ e("rect", { width: 16, height: 16, rx: 8, fill: "white" })
+      })
+    })
+  ] });
+}
+function CrownIcon() {
+  return /* @__PURE__ */ e("svg", { width: 16, height: 16, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", children:
+    /* @__PURE__ */ e("path", { d: "M2.01223 6.32057C1.85162 5.18963 3.31396 4.60938 3.96418 5.54605L5.72564 8.0835C5.95515 8.41413 6.45033 8.3862 6.64166 8.03184L9.05224 3.56711C9.4605 2.81096 10.5395 2.81096 10.9478 3.56711L13.3584 8.03184C13.5497 8.3862 14.0448 8.41413 14.2743 8.0835L16.0359 5.54605C16.686 4.60938 18.1484 5.18963 17.9878 6.32057L16.6034 15.0685C16.5275 15.603 16.0724 16 15.5357 16H4.46431C3.92759 16 3.47254 15.603 3.39664 15.0685L2.01223 6.32057Z", fill: "#FFD13B" })
+  });
+}
+function SocialLinksDesktop() {
+  return /* @__PURE__ */ t("div", { className: "flex gap-[8px] items-center", "data-name": "Social Links Desktop", children: [
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(LinkedInIcon, {}) }),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "LinkedIn" })
+    ] }) }),
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(InstagramIcon, {}) }),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "Instagram" })
+    ] }) }),
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(GithubIcon, {}) }),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "Github" })
+    ] }) })
+  ] });
+}
 function l1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[20px] items-center relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ e(X, {}),
-    /* @__PURE__ */ e(t1, {})
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
+    /* @__PURE__ */ t("div", { className: "flex gap-[20px] items-center", children: [
+      /* @__PURE__ */ e(X, {}),
+      /* @__PURE__ */ e(t1, {})
+    ] }),
+    /* @__PURE__ */ e(SocialLinksDesktop, {})
   ] });
 }
 function a1() {
@@ -511,12 +572,20 @@ function o1() {
     /* @__PURE__ */ e(C1, {})
   ] });
 }
-function x1() {
+function ReportCTAButton() {
   const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children: [
-    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) }),
-    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) })
-  ] });
+  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "Report CTA Button", children: /* @__PURE__ */ t(Z, { children: [
+    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+      /* @__PURE__ */ e(CrownIcon, {}),
+      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
+    ] }),
+    /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-white", children: "리포트 전체 보기" })
+  ] }) });
+}
+function x1() {
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children:
+    /* @__PURE__ */ e(ReportCTAButton, {})
+  });
 }
 function h1() {
   return /* @__PURE__ */ t("div", { className: "max-w-[560px] relative rounded-[16px] shrink-0 w-full", "data-name": "Best Report Details Container", children: [
@@ -1075,10 +1144,20 @@ function l2() {
     /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
+function SocialLinksMobile() {
+  return /* @__PURE__ */ t("div", { className: "flex gap-[8px] items-center", "data-name": "Social Links Mobile", children: [
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(LinkedInIcon, {}) }) }),
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(InstagramIcon, {}) }) }),
+    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(GithubIcon, {}) }) })
+  ] });
+}
 function a2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[20px] items-center relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ e(e2, {}),
-    /* @__PURE__ */ e(l2, {})
+  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
+    /* @__PURE__ */ t("div", { className: "flex gap-[20px] items-center", children: [
+      /* @__PURE__ */ e(e2, {}),
+      /* @__PURE__ */ e(l2, {})
+    ] }),
+    /* @__PURE__ */ e(SocialLinksMobile, {})
   ] });
 }
 function r2() {
@@ -1153,16 +1232,14 @@ function f2() {
   ] });
 }
 function h2() {
-  const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children: [
-    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#f3f4f6] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "더보기" }) }) }) }) }),
-    /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ e("div", { className: "flex flex-row items-center justify-center size-full", children: /* @__PURE__  */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[14px] text-center text-white whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "디스코드에서 리포트 보기" }) }) }) }) })
-  ] });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children:
+    /* @__PURE__ */ e(ReportCTAButton, {})
+  });
 }
 function m2() {
-  return /* @__PURE__ */ t("div", { className: "max-w-[400px] relative rounded-[16px] shrink-0 w-full", "data-name": "Best Report Details Container", children: [
+  return /* @__PURE__ */ t("div", { className: "relative rounded-[16px] shrink-0 w-full", "data-name": "Best Report Details Container", children: [
     /* @__PURE__ */ e("div", { "aria-hidden": !0, className: "absolute border border-[#e5e7eb] border-solid inset-0 pointer-events-none rounded-[16px]" }),
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start max-w-[inherit] px-[20px] py-[32px] relative size-full", children: [
+    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start px-[20px] py-[32px] relative size-full", children: [
       /* @__PURE__ */ e(a2, {}),
       /* @__PURE__ */ e(f2, {}),
       /* @__PURE__ */ e(h2, {})
