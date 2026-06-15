@@ -358,8 +358,8 @@ function q() {
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[32px]", children: "혼자였다면 며칠을 헤맸을 문제들." }),
       /* @__PURE__ */ t("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold text-[32px]", children: [
         /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "우리가 함께 넘은 " }),
-        /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들" }),
-        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "들을 공유합니다" })
+        /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들링" }),
+        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "을 공유합니다" })
       ] })
     ] }),
     /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[20px] text-center whitespace-normal", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "먼저 뛰어든 First Penguin의 경험이 다음 사람의 성장으로 이어진 한 주를 모았습니다." }) })
@@ -1079,8 +1079,8 @@ function Y1() {
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "며칠을 헤맸을 문제들." }),
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "우리가 함께 넘은" }),
       /* @__PURE__ */ t("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold text-[24px]", children: [
-        /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들" }),
-        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "들을 공유합니다" })
+        /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들링" }),
+        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "을 공유합니다" })
       ] })
     ] }),
     /* @__PURE__ */ t("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] max-w-[556px] min-w-full relative shrink-0 text-[#4b5563] text-[16px] text-center w-[min-content]", children: [
