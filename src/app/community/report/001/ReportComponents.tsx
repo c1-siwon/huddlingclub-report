@@ -281,8 +281,8 @@ function G() {
 }
 function Q() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[4px] items-center justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[14px] text-center w-full", "data-name": "Newsletter Info", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이 뉴스레터는 허들링클럽 멤버들이 함께 만들었습니다." }) })
+    /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }) }),
+    /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이 뉴스레터는 허들링 클럽 멤버들이 함께 만들었습니다." }) })
   ] });
 }
 function FooterLinks() {
@@ -296,8 +296,8 @@ function FooterLinks() {
 }
 function FooterInfoDesktop() {
   return /* @__PURE__ */ t("div", { className: "flex flex-col gap-[4px] items-start", "data-name": "Newsletter Info Desktop", children: [
-    /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[14px] text-[#6b7280] leading-[1.5]", children: "허들링클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }),
-    /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[14px] text-[#6b7280] leading-[1.5]", children: "이 뉴스레터는 허들링클럽 멤버들이 함께 만들었습니다." })
+    /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[14px] text-[#6b7280] leading-[1.5]", children: "허들링 클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }),
+    /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[14px] text-[#6b7280] leading-[1.5]", children: "이 뉴스레터는 허들링 클럽 멤버들이 함께 만들었습니다." })
   ] });
 }
 function LofoSvgDesktop() {
@@ -475,7 +475,7 @@ function e1() {
 function t1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
     /* @__PURE__ */ e(e1, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
 function LinkedInIcon() {
@@ -555,7 +555,7 @@ function a1() {
   ] });
 }
 function r1() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
 }
 function i1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
@@ -853,7 +853,7 @@ function P1() {
 function AA1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full max-w-[560px]", children: [
     /* @__PURE__ */ e("button", { type: "button", className: "border border-[#e5e7eb] bg-white relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[#131313] text-[14px] text-center whitespace-nowrap", children: "무료 카톡방 입장하기" }) }) }),
-    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "허들링클럽 멤버되기" }) }) })
+    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "허들링 클럽 멤버되기" }) }) })
   ] });
 }
 function z1() {
@@ -1050,8 +1050,8 @@ function Q1() {
 }
 function W1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col font-['Pretendard_Variable',sans-serif] gap-[4px] items-center justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] text-center w-full", "data-name": "Newsletter Info", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이 뉴스레터는 허들링클럽 멤버들이 함께 만들었습니다." }) })
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 뉴스레터 제 1호 ∙ 2026년 7월 1일 발행" }) }),
+    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이 뉴스레터는 허들링 클럽 멤버들이 함께 만들었습니다." }) })
   ] });
 }
 function FooterLinksMobile() {
@@ -1203,7 +1203,7 @@ function t2() {
 function l2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
     /* @__PURE__ */ e(t2, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링클럽 ∙ 프로덕트 디자이너" }) })
+    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 ∙ 프로덕트 디자이너" }) })
   ] });
 }
 function SocialLinksMobile() {
@@ -1229,7 +1229,7 @@ function r2() {
   ] });
 }
 function i2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
+  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
 }
 function n2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
@@ -1507,7 +1507,7 @@ function S2() {
 function D2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full", children: [
     /* @__PURE__ */ e("button", { type: "button", className: "border border-[#e5e7eb] bg-white relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[#131313] text-[14px] text-center whitespace-nowrap", children: "무료 카톡방 입장하기" }) }) }),
-    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "허들링클럽 멤버되기" }) }) })
+    /* @__PURE__ */ e("button", { type: "button", className: "bg-[#0058e0] relative rounded-[12px] shrink-0 w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", children: /* @__PURE__ */ e("div", { className: "content-stretch flex items-center justify-center px-[18px] py-[13px] relative size-full", children: /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-center text-white whitespace-nowrap", children: "허들링 클럽 멤버되기" }) }) })
   ] });
 }
 function E2() {
