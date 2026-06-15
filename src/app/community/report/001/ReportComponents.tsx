@@ -621,7 +621,7 @@ function o1() {
 function ReportCTAButton() {
   const { setOpen } = n3(ModalContext);
   return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "Report CTA Button", children: /* @__PURE__ */ t(Z, { children: [
-    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+    /* @__PURE__ */ t("div", { className: "hidden items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
       /* @__PURE__ */ e(CrownIcon, {}),
       /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
     ] }),
@@ -733,7 +733,7 @@ function k1() {
 function y1() {
   const { setOpen } = n3(ModalContext);
   return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ t(Z, { children: [
-    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+    /* @__PURE__ */ t("div", { className: "hidden items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
       /* @__PURE__ */ e(CrownIcon, {}),
       /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
     ] }),
@@ -1393,7 +1393,7 @@ function y2() {
 function _2() {
   const { setOpen } = n3(ModalContext);
   return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "a.btn", children: /* @__PURE__ */ t(Z, { children: [
-    /* @__PURE__ */ t("div", { className: "flex items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
+    /* @__PURE__ */ t("div", { className: "hidden items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
       /* @__PURE__ */ e(CrownIcon, {}),
       /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
     ] }),
