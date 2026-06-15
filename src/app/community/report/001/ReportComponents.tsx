@@ -357,7 +357,7 @@ function q() {
     /* @__PURE__ */ t("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#131313] text-[0px] text-center whitespace-normal", children: [
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[32px]", children: "혼자였다면 며칠을 헤맸을 문제들." }),
       /* @__PURE__ */ t("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold text-[32px]", children: [
-        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "우리가 함께 넘은 " }),
+        /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "우리가 함께 만든 " }),
         /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들링" }),
         /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "을 공유합니다" })
       ] })
@@ -668,7 +668,7 @@ function v1() {
 }
 function b1() {
   const { startTime, isPlaying, setIsPlaying } = n3(VideoContext);
-  return /* @__PURE__ */ t("div", { className: "bg-[#0a0d12] h-[320px] relative rounded-[16px] shrink-0 w-full max-w-[560px] overflow-hidden", "data-name": "div.video", children: [
+  return /* @__PURE__ */ t("div", { className: "bg-[#0a0d12] h-[319px] relative rounded-[16px] shrink-0 w-full max-w-[560px] overflow-hidden", "data-name": "div.video", children: [
     isPlaying ? /* @__PURE__ */ e("iframe", { src: `https://www.youtube.com/embed/a-wzqVa_nLM?start=${startTime}&rel=0&autoplay=1`, title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => setIsPlaying(!0), children: [
       /* @__PURE__ */ e("img", { src: "https://img.youtube.com/vi/a-wzqVa_nLM/maxresdefault.jpg", alt: "동영상 썸네일", className: "absolute inset-0 w-full h-full object-cover" }),
       /* @__PURE__ */ e("div", { className: "absolute inset-0 flex items-center justify-center", style: { background: "rgba(0,0,0,0.25)" }, children: /* @__PURE__ */ e("div", { style: { width: 64, height: 64, borderRadius: "50%", background: "rgba(255,255,255,0.9)", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", width: 32, height: 32, children: /* @__PURE__ */ e("path", { d: "M8 5v14l11-7z", fill: "#FF0000" }) }) }) })
@@ -1075,7 +1075,7 @@ function Y1() {
     /* @__PURE__ */ t("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] justify-center leading-[0] max-w-[556px] min-w-full not-italic relative shrink-0 text-[#131313] text-[0px] text-center w-[min-content]", children: [
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "혼자였다면" }),
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "며칠을 헤맸을 문제들." }),
-      /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "우리가 함께 넘은" }),
+      /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "우리가 함께 만든" }),
       /* @__PURE__ */ t("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold text-[24px]", children: [
         /* @__PURE__ */ e("span", { className: "leading-[1.5] text-[#0058e0]", children: "허들링" }),
         /* @__PURE__ */ e("span", { className: "leading-[1.5]", children: "을 공유합니다" })
@@ -1333,7 +1333,7 @@ function b2() {
 }
 function w2() {
   const { startTime, isPlaying, setIsPlaying } = n3(VideoContext);
-  return /* @__PURE__ */ t("div", { className: "bg-[#0a0d12] h-[180px] relative rounded-[16px] shrink-0 w-full overflow-hidden", "data-name": "div.video", children: [
+  return /* @__PURE__ */ t("div", { className: "aspect-[556/318.760009765625] bg-[#0a0d12] relative rounded-[16px] shrink-0 w-full overflow-hidden", "data-name": "div.video", children: [
     isPlaying ? /* @__PURE__ */ e("iframe", { src: `https://www.youtube.com/embed/a-wzqVa_nLM?start=${startTime}&rel=0&autoplay=1`, title: "Monthly Live - 프롬프트 엔지니어링, 실전에서 쓰는 법", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: !0, className: "absolute inset-0 size-full rounded-[16px] border-0" }) : /* @__PURE__ */ t("div", { className: "absolute inset-0 cursor-pointer", onClick: () => setIsPlaying(!0), children: [
       /* @__PURE__ */ e("img", { src: "https://img.youtube.com/vi/a-wzqVa_nLM/maxresdefault.jpg", alt: "동영상 썸네일", className: "absolute inset-0 w-full h-full object-cover" }),
       /* @__PURE__ */ e("div", { className: "absolute inset-0 flex items-center justify-center", style: { background: "rgba(0,0,0,0.25)" }, children: /* @__PURE__ */ e("div", { style: { width: 64, height: 64, borderRadius: "50%", background: "rgba(255,255,255,0.9)", display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ e("svg", { viewBox: "0 0 24 24", width: 32, height: 32, children: /* @__PURE__ */ e("path", { d: "M8 5v14l11-7z", fill: "#FF0000" }) }) }) })
