@@ -13,7 +13,7 @@
  * runtime.js 의존성 완전 제거됨
  */
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReportContent from './ReportComponents'
 import './report.css'
 
@@ -21,6 +21,9 @@ const TRANSPARENT_PIXEL =
   'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 
 export default function ReportPage() {
+  // 비밀번호 모달 open/close 상태를 페이지에서 소유하고 props로 전달
+  const [modalOpen, setModalOpen] = useState(false)
+
   useEffect(() => {
     const insertLink = (href: string): HTMLLinkElement => {
       if (document.querySelector(`link[href="${href}"]`)) {
@@ -108,5 +111,5 @@ export default function ReportPage() {
     }
   }, [])
 
-  return <ReportContent />
+  return <ReportContent open={modalOpen} setOpen={setModalOpen} />
 }
