@@ -30,9 +30,13 @@ huddlingclub1/
 │       ├── report.css          # 커스텀 레이아웃 CSS
 │       └── CLAUDE.md           # 리포트별 상세 문서
 │
-├── public/community/report/001/
-│   ├── fonts.css               # Pretendard Variable CDN
-│   └── base-styles.css         # Tailwind v4 + Figma 리셋
+├── public/
+│   ├── assets/
+│   │   ├── images/             # 공용 이미지 (puddy.png, together.png 등)
+│   │   ├── icons/              # 공용 아이콘 SVG (linkedin.svg, Logo.svg 등)
+│   │   └── styles/             # 공용 CSS (fonts.css, base-styles.css)
+│   └── community/report/001/
+│       └── images/             # 001호 전용 이미지 (인터뷰 사진 등)
 │
 ├── next.config.mjs             # Next.js 설정
 ├── tailwind.config.ts          # Tailwind 설정
@@ -40,6 +44,28 @@ huddlingclub1/
 ├── tsconfig.json               # TypeScript 설정
 └── package.json                # 의존성
 ```
+
+## 프로젝트 파일 구조
+
+### public 폴더 규칙
+```
+public/
+├── assets/
+│   ├── images/       ← 공용 이미지 (puddy.png, together.png 등)
+│   ├── icons/        ← 공용 아이콘 SVG (linkedin.svg, Logo.svg 등)
+│   └── styles/       ← 공용 CSS (fonts.css, base-styles.css)
+└── community/report/
+    ├── 001/
+    │   └── images/   ← 001호 전용 이미지 (인터뷰 사진 등)
+    ├── 002/
+    │   └── images/   ← 002호 전용 이미지
+    └── (호수별 폴더 추가)
+```
+
+새 파일 추가 시 규칙:
+- 여러 리포트에서 공통으로 쓰는 이미지/아이콘/스타일 → `public/assets/` 하위
+- 특정 호수에서만 쓰는 이미지 → `public/community/report/{호수}/images/`
+- `public/community/report/{호수}/` 루트에 파일 직접 넣지 말 것
 
 ## 리포트 워크플로우
 
@@ -49,7 +75,8 @@ huddlingclub1/
 2. Figma Make에서 새 리포트 디자인 → Standalone HTML 내보내기
 3. HTML에서 `const __code__ = \`...\`;` 내부 코드 추출
 4. `ReportComponents.tsx`로 변환 (jsx-runtime import 추가)
-5. `public/community/report/002/` 폴더 생성 후 CSS 파일 배치
+5. `public/community/report/002/images/` 폴더만 생성 (호수 전용 이미지용)
+   - CSS 파일(fonts.css, base-styles.css)은 `public/assets/styles/`에 공용으로 있으므로 **복사 불필요**
 
 ### ReportComponents.tsx 변환 규칙
 

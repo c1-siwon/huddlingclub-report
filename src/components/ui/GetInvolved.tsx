@@ -17,7 +17,7 @@ export function z1() {
       /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "검증된 경험을 배우고 공유하며" }),
       /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "순환하는 허들링 클럽에서 함께 성장해봐요" })
     ] }) }),
-    /* @__PURE__ */ e("img", { src: "/community/report/001/involved.png", alt: "Get Involved", width: 400, height: 211, style: { objectFit: "cover" } }),
+    /* @__PURE__ */ e("img", { src: "/assets/images/involved.png", alt: "Get Involved", width: 400, height: 211, style: { objectFit: "cover" } }),
     /* @__PURE__ */ e(AA1, {})
   ] }) }) });
 }
@@ -33,7 +33,7 @@ export function E2() {
       /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "검증된 경험을 배우고 공유하며" }),
       /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "순환하는 허들링 클럽에서 함께 성장해봐요" })
     ] }) }),
-    /* @__PURE__ */ e("img", { src: "/community/report/001/involved.png", alt: "Get Involved", className: "w-full", style: { aspectRatio: "3176/1673", objectFit: "cover" } }),
+    /* @__PURE__ */ e("img", { src: "/assets/images/involved.png", alt: "Get Involved", className: "w-full", style: { aspectRatio: "3176/1673", objectFit: "cover" } }),
     /* @__PURE__ */ e(D2, {})
   ] }) }) });
 }

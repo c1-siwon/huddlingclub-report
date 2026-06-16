@@ -36,8 +36,8 @@ export default function ReportPage() {
       return link
     }
 
-    const fontsLink = insertLink('/community/report/001/fonts.css')
-    const baseLink = insertLink('/community/report/001/base-styles.css')
+    const fontsLink = insertLink('/assets/styles/fonts.css')
+    const baseLink = insertLink('/assets/styles/base-styles.css')
 
     const W560_SELECTORS = [
       '[data-name="Monthly Live Video Container"]',

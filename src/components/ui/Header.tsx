@@ -10,7 +10,7 @@ import { Logo } from '@/components/ui/Logo';
 export function H() {
   return /* @__PURE__ */ t("div", { className: "relative shrink-0", style: { background: "transparent" }, "data-name": "HuddingClubLogoWrapper", children: [
     /* @__PURE__ */ e("img", {
-      src: "/community/report/001/lofo.svg",
+      src: "/assets/images/lofo.svg",
       alt: "",
       width: 380,
       height: 297,
@@ -33,7 +33,7 @@ export function F() {
 }
 export function q() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Intro Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[20px] items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] pt-[80px] pb-[40px] relative size-full", children: [
-    /* @__PURE__ */ e("img", { src: "/community/report/001/together.png", alt: "", width: 240, style: { height: "auto", objectFit: "contain", margin: "0 auto", background: "transparent" } }),
+    /* @__PURE__ */ e("img", { src: "/assets/images/together.png", alt: "", width: 240, style: { height: "auto", objectFit: "contain", margin: "0 auto", background: "transparent" } }),
     /* @__PURE__ */ t("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[#131313] text-[0px] text-center whitespace-normal", children: [
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[32px]", children: "혼자였다면 며칠을 헤맸을 문제들." }),
       /* @__PURE__ */ t("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold text-[32px]", children: [
@@ -117,7 +117,7 @@ export function Y() {
 export function D1() {
   return /* @__PURE__*/ t("div", { className: "relative shrink-0", style: { background: "transparent" }, "data-name": "HuddingClubLogoWrapper", children: [
     /* @__PURE__ */ e("img", {
-      src: "/community/report/001/lofo.svg",
+      src: "/assets/images/lofo.svg",
       alt: "",
       width: 200,
       height: 156,
@@ -140,7 +140,7 @@ export function U1() {
 }
 export function Y1() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Intro Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[20px] items-center justify-center px-[20px] pt-[60px] pb-[40px] relative size-full", children: [
-    /* @__PURE__ */ e("img", { src: "/community/report/001/together.png", alt: "", width: 160, style: { height: "auto", objectFit: "contain", margin: "0 auto", background: "transparent" } }),
+    /* @__PURE__ */ e("img", { src: "/assets/images/together.png", alt: "", width: 160, style: { height: "auto", objectFit: "contain", margin: "0 auto", background: "transparent" } }),
     /* @__PURE__ */ t("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] justify-center leading-[0] max-w-[556px] min-w-full not-italic relative shrink-0 text-[#131313] text-[0px] text-center w-[min-content]", children: [
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "혼자였다면" }),
       /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-extrabold leading-[1.5] mb-0 text-[24px]", children: "며칠을 헤맸을 문제들." }),

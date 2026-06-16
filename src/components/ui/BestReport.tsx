@@ -27,7 +27,7 @@ export const m = {
 }, R = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='514' height='230' viewBox='0 0 514 230'%3E%3Crect fill='%23f3f4f6' width='514' height='230'/%3E%3Ctext x='257' y='115' text-anchor='middle' dominant-baseline='middle' fill='%239ca3af' font-family='sans-serif' font-size='14'%3E이미지 준비중%3C/text%3E%3C/svg%3E";
 export function l1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ e(AuthorProfile, { avatar: "/community/report/001/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
+    /* @__PURE__ */ e(AuthorProfile, { avatar: "/assets/images/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
     /* @__PURE__ */ e(SocialLinks, { variant: "desktop" })
   ] });
 }
@@ -96,7 +96,7 @@ export function y(s, C) {
 }
 export function a2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ e(AuthorProfile, { avatar: "/community/report/001/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
+    /* @__PURE__ */ e(AuthorProfile, { avatar: "/assets/images/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
     /* @__PURE__ */ e(SocialLinks, { variant: "mobile" })
   ] });
 }

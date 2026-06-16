@@ -34,7 +34,7 @@ export function W() {
         /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] text-[14px] text-[#6b7280] leading-[1.5]", children: "© 2026 Huddling Club All rights reserved." })
       ] }),
       /* @__PURE__ */ e("div", { className: "shrink-0", children:
-        /* @__PURE__ */ e(Image, { src: "/community/report/001/footerimage.png", alt: "Huddling Club Penguin", width: 200, height: 200 })
+        /* @__PURE__ */ e(Image, { src: "/assets/images/footerimage.png", alt: "Huddling Club Penguin", width: 200, height: 200 })
       })
     ] })
   });

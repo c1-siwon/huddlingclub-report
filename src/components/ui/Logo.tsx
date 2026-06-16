@@ -15,7 +15,7 @@ import { jsx as e } from 'react/jsx-runtime';
 
 export function Logo({ className, style, width, height, color, priority = false }) {
   return /* @__PURE__ */ e("div", { className, style, "data-name": "HuddingClubLogo", children:
-    /* @__PURE__ */ e(Image, { src: "/community/report/001/Logo.svg", alt: "Huddling Club", width, height, ...(priority ? { priority: true } : {}), style: { background: "transparent", filter: color } })
+    /* @__PURE__ */ e(Image, { src: "/assets/icons/Logo.svg", alt: "Huddling Club", width, height, ...(priority ? { priority: true } : {}), style: { background: "transparent", filter: color } })
   });
 }
 
