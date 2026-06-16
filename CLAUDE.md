@@ -1,5 +1,10 @@
 # Huddling Club Report 프로젝트
 
+## Figma Make 관련
+- 이 프로젝트는 더 이상 Figma Make를 사용하지 않음
+- Figma Make 재변환 작업 절대 하지 말 것
+- 모든 UI 수정은 직접 코드로 진행
+
 ## 프로젝트 개요
 
 - Huddling Club 커뮤니티의 주간 리포트 웹페이지

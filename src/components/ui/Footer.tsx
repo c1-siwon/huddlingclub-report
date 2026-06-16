@@ -4,17 +4,10 @@
 /** 푸터 섹션 — ReportComponents.tsx에서 분리 */
 import Image from 'next/image';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
+import { Logo } from '@/components/ui/Logo';
 
 export function G() {
-  return /* @__PURE__ */ e("div", { className: "h-[26px] relative shrink-0 w-[200px]", style: { background: "transparent" }, "data-name": "HuddingClubLogo", children:
-    /* @__PURE__ */ e(Image, {
-      src: "/community/report/001/Logo.svg",
-      alt: "Huddling Club",
-      width: 200,
-      height: 26,
-      style: { background: "transparent", filter: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" }
-    })
-  });
+  return /* @__PURE__ */ e(Logo, { className: "h-[26px] relative shrink-0 w-[200px]", style: { background: "transparent" }, width: 200, height: 26, color: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" });
 }
 export function FooterLinks() {
   return /* @__PURE__ */ t("div", { className: "flex flex-row items-center justify-start gap-[8px]", "data-name": "Footer Links", children: [
@@ -47,15 +40,7 @@ export function W() {
   });
 }
 export function Q1() {
-  return /* @__PURE__ */ e("div", { className: "h-[20px] relative shrink-0 w-[160px]", style: { background: "transparent" }, "data-name": "HuddingClubLogo", children:
-    /* @__PURE__ */ e(Image, {
-      src: "/community/report/001/Logo.svg",
-      alt: "Huddling Club",
-      width: 160,
-      height: 20,
-      style: { background: "transparent", filter: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" }
-    })
-  });
+  return /* @__PURE__ */ e(Logo, { className: "h-[20px] relative shrink-0 w-[160px]", style: { background: "transparent" }, width: 160, height: 20, color: "invert(40%) sepia(6%) saturate(725%) hue-rotate(182deg) brightness(92%) contrast(90%)" });
 }
 export function W1() {
   return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col font-['Pretendard_Variable',sans-serif] gap-[4px] items-center justify-center leading-[0] not-italic relative shrink-0 text-[#6b7280] text-[12px] text-center w-full", "data-name": "Newsletter Info", children: [

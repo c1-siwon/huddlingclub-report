@@ -5,6 +5,7 @@
 import Image from 'next/image';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
 import { L, N, g } from '@/components/ui/_shared';
+import { Logo } from '@/components/ui/Logo';
 
 export function H() {
   return /* @__PURE__ */ t("div", { className: "relative shrink-0", style: { background: "transparent" }, "data-name": "HuddingClubLogoWrapper", children: [
@@ -15,16 +16,7 @@ export function H() {
       height: 297,
       style: { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 0, background: "transparent" }
     }),
-    /* @__PURE__ */ e("div", { className: "h-[49.429px] w-[382px] relative", style: { zIndex: 1, background: "transparent" }, "data-name": "HuddingClubLogo", children:
-      /* @__PURE__ */ e(Image, {
-        src: "/community/report/001/Logo.svg",
-        alt: "Huddling Club",
-        width: 382,
-        height: 49,
-        priority: true,
-        style: { background: "transparent", filter: "brightness(0) invert(1)" }
-      })
-    })
+    /* @__PURE__ */ e(Logo, { className: "h-[49.429px] w-[382px] relative", style: { zIndex: 1, background: "transparent" }, width: 382, height: 49, color: "brightness(0) invert(1)", priority: true })
   ] });
 }
 export function D() {
@@ -131,16 +123,7 @@ export function D1() {
       height: 156,
       style: { position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 0, background: "transparent" }
     }),
-    /* @__PURE__ */ e("div", { className: "h-[29.761px] w-[230px] relative", style: { zIndex: 1, background: "transparent" }, "data-name": "HuddingClubLogo", children:
-      /* @__PURE__ */ e(Image, {
-        src: "/community/report/001/Logo.svg",
-        alt: "Huddling Club",
-        width: 230,
-        height: 30,
-        priority: true,
-        style: { background: "transparent", filter: "brightness(0) invert(1)" }
-      })
-    })
+    /* @__PURE__ */ e(Logo, { className: "h-[29.761px] w-[230px] relative", style: { zIndex: 1, background: "transparent" }, width: 230, height: 30, color: "brightness(0) invert(1)", priority: true })
   ] });
 }
 export function F1() {

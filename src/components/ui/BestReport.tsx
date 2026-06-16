@@ -5,6 +5,11 @@
 import React from 'react';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
 import { CrownIcon, ModalContext, S1, VideoContext, l, n3 } from '@/components/ui/_shared';
+import { Button } from '@/components/ui/Button';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { SocialLinks } from '@/components/ui/SocialLinks';
+import { AuthorProfile } from '@/components/ui/AuthorProfile';
+import { QAItem } from '@/components/ui/QAItem';
 
 export const m = {
   p1b4eb500: "M38.3922 14.5618C38.3911 14.8153 38.3623 14.9002 38.2529 15.03C38.1908 15.1037 38.0271 15.1808 37.8833 15.0455C37.6336 14.8092 37.6636 14.2423 37.9782 14.0859C38.2352 13.9577 38.3928 14.3394 38.3922 14.5612V14.5618Z",
@@ -20,176 +25,31 @@ export const m = {
   p5d3fd00: "M34.871 15.4606C35.1996 15.6287 35.4516 15.8201 35.7491 16.1302C35.9928 16.3838 36.2148 17.1195 35.8713 17.4485C35.2046 18.0882 34.2943 18.5365 33.4195 18.7523C32.4093 19.002 30.6336 18.1426 29.7255 17.5023C29.4752 17.3259 29.3592 17.0241 29.4025 16.7178C29.4358 16.4826 29.599 16.2634 29.8349 16.0953L30.2317 15.8129L30.0241 15.4295C30.4266 15.0866 30.4871 14.9834 31.0716 15.0905C31.4618 14.9585 31.7565 14.6528 32.1651 14.6383C32.5092 14.6261 32.8461 14.483 33.1814 14.5684C33.4523 14.6372 33.6937 14.8791 33.9823 14.8902C34.0667 14.8936 34.1883 14.7998 34.2432 14.8325C34.483 14.9773 34.3592 15.3457 34.7711 15.5377C34.7661 15.4567 34.8333 15.4417 34.8694 15.4606H34.871ZM34.9859 17.1899C35.1569 17.1012 35.2096 16.932 35.1802 16.7855C35.1602 16.6862 35.0575 16.5464 34.9332 16.4681L33.8464 15.7818C32.3493 14.822 31.4718 15.7946 30.1657 16.8953C31.2303 17.4934 32.6346 18.309 33.626 17.8984L34.9859 17.1905V17.1899Z",
   p924d570: "M26.918 13.5446C28.1841 13.9385 28.1053 15.8021 27.6629 16.2792C26.984 17.011 25.7157 16.9961 25.0735 16.2509C24.5301 15.6201 24.464 14.8134 24.8787 14.1665C25.3011 13.5079 26.0893 13.2871 26.918 13.5446ZM26.1142 14.7191C26.1953 14.4062 25.9977 13.9679 25.6591 14.055C25.3205 14.1421 25.3277 14.6015 25.4171 14.8495C25.4959 15.0681 25.623 15.1774 25.8356 15.1408C25.9782 15.1163 26.0498 14.9643 26.1137 14.7191H26.1142Z"
 }, R = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='514' height='230' viewBox='0 0 514 230'%3E%3Crect fill='%23f3f4f6' width='514' height='230'/%3E%3Ctext x='257' y='115' text-anchor='middle' dominant-baseline='middle' fill='%239ca3af' font-family='sans-serif' font-size='14'%3E이미지 준비중%3C/text%3E%3C/svg%3E";
-export function J() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Best Report" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이주의 베스트 실험 선정자" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "디스코드에 공유된 리포트 중, 멤버들이 가장 많이 저장하고 인용한 한 편을 소개합니다." }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "선정자에게 직접 실험 과정을 들어봤어요." })
-    ] }) })
-  ] });
-}
-export function X() {
-  return /* @__PURE__ */ e("div", { className: "overflow-clip relative shrink-0 size-[60px]", style: { borderRadius: "999px", border: "1px solid #e5e7eb" }, "data-name": "User Logo Container", children: /* @__PURE__ */ e("img", { src: "/community/report/001/puddy.png", alt: "퍼디 프로필", className: "absolute inset-0 w-full h-full object-cover", style: { borderRadius: "999px" } }) });
-}
-export function e1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[6px] items-center relative shrink-0", "data-name": "User Name Container", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "퍼디" }) }),
-    /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", "data-name": "Badge", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "First Penguin" }) }) })
-  ] });
-}
-export function t1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
-    /* @__PURE__ */ e(e1, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 ∙ 프로덕트 디자이너" }) })
-  ] });
-}
-export function LinkedInIcon() {
-  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
-    /* @__PURE__ */ e("path", { d: "M13.5 0H2.5C1.11929 0 0 1.11929 0 2.5V13.5C0 14.8807 1.11929 16 2.5 16H13.5C14.8807 16 16 14.8807 16 13.5V2.5C16 1.11929 14.8807 0 13.5 0Z", fill: "#0966C2" }),
-    /* @__PURE__ */ e("path", { d: "M5.16718 12.9317H2.97813V6.0427H5.16718V12.9317ZM4.07265 5.07695C3.36443 5.07695 2.84937 4.56188 2.84937 3.85366C2.84937 3.14544 3.42882 2.63037 4.07265 2.63037C4.78087 2.63037 5.29594 3.14544 5.29594 3.85366C5.29594 4.56188 4.78087 5.07695 4.07265 5.07695ZM13.1507 12.9317H10.9617V9.19749C10.9617 8.10297 10.511 7.78106 9.86717 7.78106C9.22333 7.78106 8.5795 8.29612 8.5795 9.26188V12.9317H6.39046V6.0427H8.45073V7.00845C8.64388 6.55777 9.41648 5.84955 10.511 5.84955C11.7343 5.84955 13.022 6.55777 13.022 8.68243V12.9317H13.1507Z", fill: "white" })
-  ] });
-}
-export function InstagramIcon() {
-  const id = React.useId();
-  const gradientId = `paint0_radial_instagram_${id}`;
-  const maskId = `mask0_instagram_${id}`;
-  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
-    /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.63734 15.9921C3.28051 15.9794 2.82063 15.9515 2.61161 15.9093C2.29254 15.8449 1.99122 15.7472 1.74063 15.6195C1.44622 15.4694 1.18235 15.278 0.954502 15.0505C0.726136 14.8226 0.533931 14.5585 0.383286 14.2636C0.255926 14.0144 0.158289 13.7149 0.0935818 13.3976C0.0505441 13.1865 0.0220805 12.7232 0.00917738 12.3641C0.0039449 12.2173 0.00126018 12.0273 0.00126018 11.9397L0 4.06152C0 3.97427 0.00265733 3.78426 0.00786241 3.63731C0.0205464 3.28051 0.048462 2.82063 0.0906779 2.61161C0.155084 2.29256 0.252802 1.99122 0.380491 1.74063C0.530562 1.44619 0.721972 1.18237 0.949461 0.954502C1.17739 0.726163 1.44153 0.533959 1.73636 0.383286C1.98563 0.255953 2.28511 0.158289 2.60235 0.0935818C2.81348 0.0505441 3.27682 0.0220805 3.63594 0.00920477C3.78267 0.0039449 3.97265 0.00126018 4.06026 0.00126018L11.9384 0C12.0257 0 12.2157 0.00262993 12.3626 0.00786241C12.7195 0.0205738 13.1794 0.048462 13.3884 0.0906779C13.7074 0.155111 14.0088 0.25283 14.2593 0.380491C14.5538 0.530562 14.8176 0.721999 15.0455 0.949461C15.2738 1.17742 15.466 1.44151 15.6167 1.73636C15.744 1.98563 15.8417 2.28508 15.9064 2.60235C15.9495 2.81348 15.9779 3.27684 15.9908 3.63594C15.9961 3.7827 15.9987 3.97265 15.9987 4.06026L16 11.9384C16 12.0257 15.9973 12.2157 15.9921 12.3627C15.9794 12.7195 15.9515 13.1793 15.9093 13.3884C15.8449 13.7074 15.7472 14.0088 15.6195 14.2593C15.4694 14.5538 15.278 14.8176 15.0505 15.0455C14.8226 15.2738 14.5584 15.466 14.2636 15.6167C14.0143 15.744 13.7149 15.8417 13.3976 15.9064C13.1865 15.9494 12.7232 15.9779 12.3641 15.9908C12.2173 15.9961 12.0273 15.9987 11.9397 15.9987L4.06152 16C3.97424 16 3.78423 15.9973 3.63734 15.9921Z", fill: `url(#${gradientId})` }),
-    /* @__PURE__ */ e("mask", { id: maskId, style: { maskType: "luminance" }, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: 16, height: 16, children:
-      /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M3.63734 15.9921C3.28051 15.9794 2.82063 15.9515 2.61161 15.9093C2.29254 15.8449 1.99122 15.7472 1.74063 15.6195C1.44622 15.4694 1.18235 15.278 0.954502 15.0505C0.726136 14.8226 0.533931 14.5585 0.383286 14.2636C0.255926 14.0144 0.158289 13.7149 0.0935818 13.3976C0.0505441 13.1865 0.0220805 12.7232 0.00917738 12.3641C0.0039449 12.2173 0.00126018 12.0273 0.00126018 11.9397L0 4.06152C0 3.97427 0.00265733 3.78426 0.00786241 3.63731C0.0205464 3.28051 0.048462 2.82063 0.0906779 2.61161C0.155084 2.29256 0.252802 1.99122 0.380491 1.74063C0.530562 1.44619 0.721972 1.18237 0.949461 0.954502C1.17739 0.726163 1.44153 0.533959 1.73636 0.383286C1.98563 0.255953 2.28511 0.158289 2.60235 0.0935818C2.81348 0.0505441 3.27682 0.0220805 3.63594 0.00920477C3.78267 0.0039449 3.97265 0.00126018 4.06026 0.00126018L11.9384 0C12.0257 0 12.2157 0.00262993 12.3626 0.00786241C12.7195 0.0205738 13.1794 0.048462 13.3884 0.0906779C13.7074 0.155111 14.0088 0.25283 14.2593 0.380491C14.5538 0.530562 14.8176 0.721999 15.0455 0.949461C15.2738 1.17742 15.466 1.44151 15.6167 1.73636C15.744 1.98563 15.8417 2.28508 15.9064 2.60235C15.9495 2.81348 15.9779 3.27684 15.9908 3.63594C15.9961 3.7827 15.9987 3.97265 15.9987 4.06026L16 11.9384C16 12.0257 15.9973 12.2157 15.9921 12.3627C15.9794 12.7195 15.9515 13.1793 15.9093 13.3884C15.8449 13.7074 15.7472 14.0088 15.6195 14.2593C15.4694 14.5538 15.278 14.8176 15.0505 15.0455C14.8226 15.2738 14.5584 15.466 14.2636 15.6167C14.0143 15.744 13.7149 15.8417 13.3976 15.9064C13.1865 15.9494 12.7232 15.9779 12.3641 15.9908C12.2173 15.9961 12.0273 15.9987 11.9397 15.9987L4.06152 16C3.97424 16 3.78423 15.9973 3.63734 15.9921Z", fill: "white" })
-    }),
-    /* @__PURE__ */ e("g", { mask: `url(#${maskId})`, children:
-      /* @__PURE__ */ e("path", { fillRule: "evenodd", clipRule: "evenodd", d: "M8.03319 2.05811C6.42584 2.05811 6.22412 2.06517 5.59282 2.09406C4.96275 2.12308 4.53268 2.22339 4.15637 2.37057C3.7671 2.52258 3.43691 2.72593 3.10794 3.05686C2.77873 3.38767 2.57651 3.71972 2.42485 4.11104C2.27812 4.48959 2.17825 4.9222 2.14989 5.55555C2.12166 6.19039 2.11426 6.39337 2.11426 8.00973C2.11426 9.62609 2.12141 9.82832 2.15002 10.4632C2.17899 11.0968 2.27874 11.5292 2.42498 11.9077C2.57627 12.2991 2.77848 12.6312 3.10757 12.962C3.43641 13.293 3.76661 13.4969 4.15563 13.6489C4.53219 13.7961 4.96238 13.8964 5.59233 13.9254C6.22363 13.9543 6.42522 13.9614 8.03245 13.9614C9.63992 13.9614 9.84102 13.9543 10.4723 13.9254C11.1024 13.8964 11.533 13.7961 11.9095 13.6489C12.2987 13.4969 12.6284 13.293 12.9572 12.962C13.2864 12.6312 13.4886 12.2991 13.6403 11.9078C13.7858 11.5292 13.8857 11.0966 13.9153 10.4633C13.9436 9.82845 13.951 9.62609 13.951 8.00973C13.951 6.39337 13.9436 6.19052 13.9153 5.55568C13.8857 4.92208 13.7858 4.48959 13.6403 4.11117C13.4886 3.71972 13.2864 3.38767 12.9572 3.05686C12.628 2.7258 12.2988 2.52246 11.9091 2.37057C11.5318 2.22339 11.1015 2.12308 10.4715 2.09406C9.84016 2.06517 9.63918 2.05811 8.03134 2.05811H8.03319ZM7.83588 3.13051H7.83593L8.03319 3.13057C9.61341 3.13057 9.8007 3.13628 10.4247 3.16479C11.0018 3.19133 11.315 3.28829 11.5236 3.36975C11.7998 3.47763 11.9967 3.60658 12.2037 3.81489C12.4109 4.02319 12.5391 4.22158 12.6466 4.49932C12.7276 4.70887 12.8242 5.02381 12.8504 5.60409C12.8788 6.23149 12.8849 6.41996 12.8849 8.0083C12.8849 9.59664 12.8788 9.78511 12.8504 10.4125C12.824 10.9928 12.7276 11.3077 12.6466 11.5173C12.5393 11.795 12.4109 11.9928 12.2037 12.201C11.9966 12.4093 11.7999 12.5382 11.5236 12.6461C11.3152 12.7279 11.0018 12.8247 10.4247 12.8512C9.80083 12.8797 9.61341 12.8859 8.03319 12.8859C6.45284 12.8859 6.26555 12.8797 5.64165 12.8512C5.0646 12.8244 4.75141 12.7274 4.54267 12.646C4.26647 12.5381 4.06919 12.4092 3.86205 12.2008C3.6549 11.9925 3.52667 11.7947 3.41915 11.5168C3.33814 11.3072 3.2416 10.9923 3.21533 10.412C3.18697 9.78461 3.1813 9.59615 3.1813 8.00681C3.1813 6.41748 3.18697 6.23 3.21533 5.6026C3.24172 5.02232 3.33814 4.70738 3.41915 4.49759C3.52642 4.21984 3.6549 4.02146 3.86205 3.81315C4.06919 3.60484 4.26647 3.47589 4.54267 3.36777C4.75129 3.28593 5.0646 3.18922 5.64165 3.16256C6.18762 3.13776 6.39921 3.13032 7.50225 3.12908V3.13057C7.60531 3.13041 7.71617 3.13046 7.83579 3.13051H7.83584H7.83588ZM10.4822 4.83276C10.4822 4.43834 10.8003 4.11881 11.1924 4.11881V4.11856C11.5845 4.11856 11.9026 4.43846 11.9026 4.83276C11.9026 5.22705 11.5845 5.54695 11.1924 5.54695C10.8003 5.54695 10.4822 5.22705 10.4822 4.83276ZM8.03307 4.95327C6.35463 4.95334 4.99383 6.32181 4.99383 8.00968C4.99383 9.69758 6.3547 11.0655 8.03319 11.0655C9.71168 11.0655 11.0721 9.69758 11.0721 8.00968C11.0721 6.32177 9.71156 4.95327 8.03307 4.95327ZM10.006 8.00966C10.006 6.91395 9.12267 6.02579 8.03319 6.02579C6.94358 6.02579 6.06037 6.91395 6.06037 8.00966C6.06037 9.10526 6.94358 9.99354 8.03319 9.99354C9.12267 9.99354 10.006 9.10526 10.006 8.00966Z", fill: "white" })
-    }),
-    /* @__PURE__ */ e("defs", { children:
-      /* @__PURE__ */ t("radialGradient", { id: gradientId, cx: 0, cy: 0, r: 1, gradientUnits: "userSpaceOnUse", gradientTransform: "translate(4.25002 17.2323) rotate(-90) scale(15.8572 15.8572)", children: [
-        /* @__PURE__ */ e("stop", { stopColor: "#FFDD55" }),
-        /* @__PURE__ */ e("stop", { offset: 0.1, stopColor: "#FFDD55" }),
-        /* @__PURE__ */ e("stop", { offset: 0.5, stopColor: "#FF543E" }),
-        /* @__PURE__ */ e("stop", { offset: 1, stopColor: "#C837AB" })
-      ] })
-    })
-  ] });
-}
-export function GithubIcon() {
-  return /* @__PURE__ */ t("svg", { width: 16, height: 16, viewBox: "0 0 16 16", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
-    /* @__PURE__ */ e("g", { clipPath: "url(#clip0_github)", children:
-      /* @__PURE__ */ e("path", { d: "M8 0.5C12.1321 0.5 15.4999 3.93474 15.5 8.20215C15.4996 9.81909 15.0042 11.3939 14.0859 12.7051C13.1913 13.9825 11.9392 14.945 10.5 15.4697C10.5008 15.3133 10.503 15.0764 10.5049 14.7773C10.5074 14.3847 10.5098 13.8887 10.5098 13.3389C10.5097 12.8952 10.4354 12.5112 10.3076 12.1914C11.0009 12.0434 11.7049 11.7807 12.2881 11.2793C13.1158 10.5674 13.6201 9.45066 13.6201 7.77148C13.6201 6.85541 13.3351 6.08529 12.8564 5.45898C12.9713 5.01619 13.0734 4.20618 12.6855 3.21191L12.6006 2.99414L12.3799 2.91992L12.2812 3.21191C12.3696 2.94907 12.3784 2.92268 12.3789 2.91992L12.3779 2.91895H12.375C12.3737 2.91852 12.3725 2.91743 12.3711 2.91699C12.3681 2.91605 12.3646 2.91505 12.3613 2.91406C12.3549 2.91212 12.3477 2.91027 12.3398 2.9082C12.3236 2.90393 12.3041 2.89971 12.2822 2.89551C12.2384 2.8871 12.1834 2.8794 12.1172 2.87598C11.9843 2.8691 11.8087 2.87866 11.5889 2.92578C11.1863 3.0121 10.6392 3.22446 9.92969 3.69238C9.31091 3.53565 8.66411 3.45801 8.01953 3.45801C7.37417 3.45805 6.72687 3.53523 6.10742 3.69238C5.39893 3.22945 4.85377 3.01706 4.45312 2.92969C4.23445 2.88203 4.05966 2.87138 3.92773 2.87695C3.86202 2.87975 3.80718 2.88673 3.76367 2.89453C3.74209 2.89841 3.72304 2.90226 3.70703 2.90625C3.69899 2.90826 3.69119 2.91022 3.68457 2.91211C3.68145 2.913 3.67858 2.91419 3.67578 2.91504C3.67431 2.91549 3.67229 2.91558 3.6709 2.91602L3.66895 2.91699H3.66797C3.66748 2.91715 3.66736 2.91759 3.82031 3.39355L3.66699 2.91797L3.44043 2.99023L3.35449 3.21191C2.96639 4.2067 3.0677 5.01732 3.18262 5.45996C2.70395 6.08828 2.41997 6.8656 2.41992 7.77148C2.41992 9.44506 2.92081 10.5613 3.74512 11.2744C4.32676 11.7775 5.03019 12.0415 5.72363 12.1904C5.67881 12.3025 5.64184 12.4229 5.61133 12.5508C5.44031 12.6055 5.23552 12.6483 5.0293 12.6289C4.75508 12.603 4.43117 12.4716 4.15234 11.9912L4.14648 11.9814C4.05484 11.8312 3.87352 11.5723 3.61133 11.3467C3.35026 11.122 2.96464 10.8935 2.48145 10.9014C2.30049 10.9042 2.05771 10.9275 1.86914 11.0693C1.75494 11.1553 1.66046 11.286 1.63184 11.4531C1.60563 11.6067 1.64389 11.7373 1.68164 11.8223C1.75241 11.9815 1.87483 12.1021 1.95898 12.1748C2.05094 12.2542 2.155 12.3234 2.25098 12.377V12.3789C2.26489 12.3869 2.31058 12.4206 2.38086 12.502C2.44638 12.5779 2.51579 12.6735 2.58301 12.7783C2.72081 12.9932 2.82266 13.2031 2.85254 13.2812V13.2803C2.95795 13.5781 3.18797 14.027 3.72168 14.334C4.15563 14.5835 4.7372 14.7053 5.51172 14.6377C5.5126 14.774 5.51357 14.9033 5.51465 15.0205C5.51635 15.2059 5.51667 15.3595 5.51758 15.4688C4.07394 14.9493 2.81621 13.9898 1.91797 12.7119C0.995893 11.4001 0.499171 9.82186 0.5 8.20215C0.500106 3.93474 3.86791 0.5 8 0.5Z", fill: "#24292F", stroke: "#24292F" })
-    }),
-    /* @__PURE__ */ e("defs", { children:
-      /* @__PURE__ */ e("clipPath", { id: "clip0_github", children:
-        /* @__PURE__ */ e("rect", { width: 16, height: 16, rx: 8, fill: "white" })
-      })
-    })
-  ] });
-}
-export function SocialLinksDesktop() {
-  return /* @__PURE__ */ t("div", { className: "flex gap-[8px] items-center", "data-name": "Social Links Desktop", children: [
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
-      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(LinkedInIcon, {}) }),
-      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "LinkedIn" })
-    ] }) }),
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
-      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(InstagramIcon, {}) }),
-      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "Instagram" })
-    ] }) }),
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center gap-[4px] px-[12px] py-[8px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ t(Z, { children: [
-      /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(GithubIcon, {}) }),
-      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[16px] text-[#131313] leading-[150%]", children: "Github" })
-    ] }) })
-  ] });
-}
 export function l1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ t("div", { className: "flex gap-[20px] items-center", children: [
-      /* @__PURE__ */ e(X, {}),
-      /* @__PURE__ */ e(t1, {})
-    ] }),
-    /* @__PURE__ */ e(SocialLinksDesktop, {})
-  ] });
-}
-export function a1() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "먼저 간단한 인사 부탁드려요." }) })
-  ] });
-}
-export function r1() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
-}
-export function i1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(r1, {})
-  ] });
-}
-export function n1() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번 실험은 어떤 문제에서 출발했나요?" }) })
+    /* @__PURE__ */ e(AuthorProfile, { avatar: "/community/report/001/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
+    /* @__PURE__ */ e(SocialLinks, { variant: "desktop" })
   ] });
 }
 export function s1() {
   return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: R }) });
 }
-export function c1() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.' }) }) });
-}
-export function d1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(c1, {})
-  ] });
-}
-export function BB1() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 과정에서 가장 어려웠던 점은 무엇인가요?" }) })
-  ] });
-}
-export function CC1() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }) }) });
-}
-export function DD1() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(CC1, {})
-  ] });
-}
 export function C1() {
   return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(BB1, {}),
-      /* @__PURE__ */ e(DD1, {})
-    ] }),
+    /* @__PURE__ */ e(QAItem, { question: "실험 과정에서 가장 어려웠던 점은 무엇인가요?", answer: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }),
     /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
   ] });
 }
 export function o1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(a1, {}),
-      /* @__PURE__ */ e(i1, {})
-    ] }),
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(n1, {}),
-      /* @__PURE__  */ e(s1, {}),
-      /* @__PURE__ */ e(d1, {})
-    ] }),
+    /* @__PURE__ */ e(QAItem, { question: "먼저 간단한 인사 부탁드려요.", answer: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }),
+    /* @__PURE__ */ e(QAItem, { question: "이번 실험은 어떤 문제에서 출발했나요?", answer: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.', media: /* @__PURE__ */ e(s1, {}) }),
     /* @__PURE__ */ e(C1, {})
   ] });
 }
 export function ReportCTAButton() {
   const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(true), className: "bg-[#0058e0] flex items-center justify-center gap-[8px] px-[16px] h-[52px] rounded-[12px] w-full cursor-pointer transition-opacity duration-150 hover:opacity-90 active:opacity-75", "data-name": "Report CTA Button", children: /* @__PURE__ */ t(Z, { children: [
-    /* @__PURE__ */ t("div", { className: "hidden items-center gap-[6px] px-[10px] py-[4px] rounded-[99px]", style: { background: "rgba(255,255,255,0.16)" }, children: [
-      /* @__PURE__ */ e(CrownIcon, {}),
-      /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-semibold text-[12px] text-white", children: "멤버전용" })
-    ] }),
-    /* @__PURE__ */ e("span", { className: "font-['Pretendard_Variable',sans-serif] font-bold text-[14px] text-white", children: "리포트 전체 보기" })
-  ] }) });
+  return /* @__PURE__ */ e(Button, { label: "리포트 전체 보기", dataName: "Report CTA Button", onClick: () => setOpen(true) });
 }
 export function x1() {
   return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children:
@@ -208,7 +68,10 @@ export function h1() {
 }
 export function m1() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Best Report Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[80px] relative size-full", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center max-w-[560px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(J, {}) }),
+    /* @__PURE__ */ e(SectionHeader, { eyebrow: "Best Report", maxWidth: "max-w-[560px]", title: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이주의 베스트 실험 선정자" }), description: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "디스코드에 공유된 리포트 중, 멤버들이 가장 많이 저장하고 인용한 한 편을 소개합니다." }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "선정자에게 직접 실험 과정을 들어봤어요." })
+    ] }) }),
     /* @__PURE__ */ e(h1, {})
   ] }) }) });
 }
@@ -231,119 +94,25 @@ export function y(s, C) {
     /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0 hover:bg-[#e0e7ff] transition-colors", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) })
   ] });
 }
-export function K1() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "Best Report" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.5] mb-0", children: "이주의 베스트" }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 선정자" })
-    ] }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ t("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children: [
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "디스코드에 공유된 리포트 중," }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "멤버들이 가장 많이 저장하고 인용한 한 편을 소개합니다." }),
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "선정자에게 직접 실험 과정을 들어봤어요." })
-    ] }) })
-  ] });
-}
-export function e2() {
-  return /* @__PURE__ */ e("div", { className: "overflow-clip relative shrink-0 size-[60px]", style: { borderRadius: "999px", border: "1px solid #e5e7eb" }, "data-name": "User Logo Container", children: /* @__PURE__ */ e("img", { src: "/community/report/001/puddy.png", alt: "퍼디 프로필", className: "absolute inset-0 w-full h-full object-cover", style: { borderRadius: "999px" } }) });
-}
-export function t2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[6px] items-center relative shrink-0", "data-name": "User Name Container", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#131313] text-[20px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "퍼디" }) }),
-    /* @__PURE__ */ e("div", { className: "bg-[#f3f4f6] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", "data-name": "Badge", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#131313] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "First Penguin" }) }) })
-  ] });
-}
-export function l2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[4px] items-start relative shrink-0", "data-name": "User Details", children: [
-    /* @__PURE__ */ e(t2, {}),
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center leading-[0] relative shrink-0 text-[#6b7280] text-[16px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "허들링 클럽 ∙ 프로덕트 디자이너" }) })
-  ] });
-}
-export function SocialLinksMobile() {
-  return /* @__PURE__ */ t("div", { className: "flex gap-[8px] items-center", "data-name": "Social Links Mobile", children: [
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(LinkedInIcon, {}) }) }),
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(InstagramIcon, {}) }) }),
-    /* @__PURE__ */ e("a", { href: "#", className: "bg-white flex items-center justify-center w-[40px] px-[12px] py-[8px] gap-[4px] rounded-[8px] border border-[#e5e7eb] hover:bg-[#f9fafb] transition-colors", children: /* @__PURE__ */ e("div", { className: "w-[24px] h-[24px] flex items-center justify-center", style: { padding: "3.592px 4.286px 4.408px 3.714px" }, children: /* @__PURE__ */ e(GithubIcon, {}) }) })
-  ] });
-}
 export function a2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0", "data-name": "User Info", children: [
-    /* @__PURE__ */ t("div", { className: "flex gap-[20px] items-center", children: [
-      /* @__PURE__ */ e(e2, {}),
-      /* @__PURE__ */ e(l2, {})
-    ] }),
-    /* @__PURE__ */ e(SocialLinksMobile, {})
-  ] });
-}
-export function r2() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "먼저 간단한 인사 부탁드려요." }) })
-  ] });
-}
-export function i2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }) }) });
-}
-export function n2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(i2, {})
-  ] });
-}
-export function s2() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번 실험은 어떤 문제에서 출발했나요?" }) })
+    /* @__PURE__ */ e(AuthorProfile, { avatar: "/community/report/001/puddy.png", name: "퍼디", detail: "허들링 클럽 ∙ 프로덕트 디자이너", badge: "First Penguin" }),
+    /* @__PURE__ */ e(SocialLinks, { variant: "mobile" })
   ] });
 }
 export function c2() {
   return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: S1 }) });
 }
-export function d2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.' }) }) });
-}
-export function C2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(d2, {})
-  ] });
-}
-export function EE2() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex font-['Pretendard_Variable',sans-serif] font-bold gap-[8px] h-[22px] items-center leading-[0] relative shrink-0 text-[14px] w-full whitespace-nowrap", "data-name": "questionArea", children: [
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#0058e0]", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "Q." }) }),
-    /* @__PURE__ */ e("div", { className: "flex flex-col justify-center relative shrink-0 text-[#131313]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 과정에서 가장 어려웠던 점은 무엇인가요?" }) })
-  ] });
-}
-export function FF2() {
-  return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-[1_0_0] items-center justify-center min-w-px py-[2px] relative", "data-name": "AnswerSpan", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-[1_0_0] flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] min-w-px relative text-[14px] text-[rgba(46,47,51,0.82)]", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }) }) });
-}
-export function GG2() {
-  return /* @__PURE__ */ t("div", { className: "content-stretch flex gap-[8px] items-start relative shrink-0 w-full", "data-name": "AnswerArea", children: [
-    /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center leading-[0] relative shrink-0 text-[#9ca3af] text-[14px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "A." }) }),
-    /* @__PURE__ */ e(FF2, {})
-  ] });
-}
 export function o2() {
   return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(EE2, {}),
-      /* @__PURE__ */ e(GG2, {})
-    ] }),
+    /* @__PURE__ */ e(QAItem, { question: "실험 과정에서 가장 어려웠던 점은 무엇인가요?", answer: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }),
     /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
   ] });
 }
 export function f2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(r2, {}),
-      /* @__PURE__ */ e(n2, {})
-    ] }),
-    /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[10px] items-start py-[4px] relative shrink-0 w-full", "data-name": "QuestionItem", children: [
-      /* @__PURE__ */ e(s2, {}),
-      /* @__PURE__ */ e(c2, {}),
-      /* @__PURE__ */ e(C2, {})
-    ] }),
+    /* @__PURE__ */ e(QAItem, { question: "먼저 간단한 인사 부탁드려요.", answer: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }),
+    /* @__PURE__ */ e(QAItem, { question: "이번 실험은 어떤 문제에서 출발했나요?", answer: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.', media: /* @__PURE__ */ e(c2, {}) }),
     /* @__PURE__ */ e(o2, {})
   ] });
 }
@@ -364,7 +133,14 @@ export function m2() {
 }
 export function u2() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Best Report Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center px-[20px] py-[60px] relative size-full", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center max-w-[400px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(K1, {}) }),
+    /* @__PURE__ */ e(SectionHeader, { eyebrow: "Best Report", maxWidth: "max-w-[400px]", title: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("p", { className: "leading-[1.5] mb-0", children: "이주의 베스트" }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "실험 선정자" })
+    ] }), description: /* @__PURE__ */ t(Z, { children: [
+      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "디스코드에 공유된 리포트 중," }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.8] mb-0", children: "멤버들이 가장 많이 저장하고 인용한 한 편을 소개합니다." }),
+      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "선정자에게 직접 실험 과정을 들어봤어요." })
+    ] }) }),
     /* @__PURE__ */ e(m2, {})
   ] }) }) });
 }

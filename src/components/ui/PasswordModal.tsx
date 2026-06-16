@@ -5,12 +5,12 @@
 import Image from 'next/image';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
 import { L, ModalContext, n3 } from '@/components/ui/_shared';
+import { Modal } from '@/components/ui/Modal';
 
 export function PasswordModal() {
   const { open, setOpen } = n3(ModalContext);
   const [pw, setPw] = L("");
   const [error, setError] = L("");
-  if (!open) return null;
   const handleSubmit = () => {
     if (pw === "huddling2024") {
       setOpen(false);
@@ -20,8 +20,7 @@ export function PasswordModal() {
       setError("비밀번호가 일치하지 않습니다.");
     }
   };
-  return /* @__PURE__ */ e("div", { className: "fixed inset-0 z-[9999] flex items-center justify-center", children: /* @__PURE__ */ t(Z, { children: [
-    /* @__PURE__ */ e("div", { className: "absolute inset-0 bg-black/50", onClick: () => setOpen(false) }),
+  return /* @__PURE__ */ e(Modal, { isOpen: open, onClose: () => setOpen(false), children:
     /* @__PURE__ */ t("div", { className: "relative bg-[#ffffff] rounded-[20px] pt-[32px] pb-[20px] px-[20px] max-w-[400px] w-[90%] flex flex-col gap-[20px] items-center", children: [
       // 닫기 버튼 (우측 상단, 패딩 16px, X 아이콘 20px)
       /* @__PURE__ */ e("button", { type: "button", onClick: () => setOpen(false), "aria-label": "닫기", className: "absolute top-0 right-0 p-[16px] text-[#131313] cursor-pointer", children: /* @__PURE__ */ e("svg", { width: 20, height: 20, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ e("path", { d: "M5 5L15 15M15 5L5 15", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" }) }) }),
@@ -47,7 +46,7 @@ export function PasswordModal() {
         /* @__PURE__ */ e("button", { type: "button", className: "w-full h-[48px] bg-[#f0f5ff] text-[#0058e0] font-['Pretendard_Variable',sans-serif] font-bold text-[14px] rounded-[12px] cursor-pointer hover:opacity-90 active:opacity-75", children: "멤버 가입하기" })
       ] })
     ] })
-  ] }) });
+  });
 }
 
 

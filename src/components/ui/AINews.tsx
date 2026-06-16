@@ -4,6 +4,8 @@
 /** 이번주 AI 핫이슈 섹션 — ReportComponents.tsx에서 분리 */
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
 import { E1, l } from '@/components/ui/_shared';
+import { SectionHeader } from '@/components/ui/SectionHeader';
+import { NewsCard } from '@/components/ui/NewsCard';
 
 export const S = "/_components/v2/b19b42b743351cd1189b1a4875b7001fc7f71ba7/ece298d0ec2c16f10310d45724b276a6035cb503.ece298d0.png", i = {
   p10172f00: "M264.376 39.107C261.229 38.6397 258.081 38.6397 254.976 39.107C255.104 27.0853 255.104 15.0636 254.976 3.08433C258.124 3.55161 261.271 3.55161 264.376 3.08433C264.249 15.106 264.249 27.1277 264.376 39.107Z",
@@ -29,15 +31,6 @@ export const S = "/_components/v2/b19b42b743351cd1189b1a4875b7001fc7f71ba7/ece29
   pe55600: "M190.738 48.4099C188.824 47.7302 187.335 46.7532 186.315 45.4363C185.294 44.162 184.698 42.6327 184.613 40.891C187.591 40.8061 190.568 40.7636 193.545 40.7211C193.716 41.5707 194.183 42.2079 194.906 42.5902C195.672 42.9725 196.65 43.1849 197.841 43.1424C199.245 43.1424 200.351 42.8451 201.116 42.2079C201.924 41.5707 202.307 40.4662 202.307 38.937C202.307 37.4077 202.307 35.9209 202.307 34.3917C202.222 34.3917 202.095 34.3917 202.01 34.3917C202.01 34.4766 201.924 34.5616 201.924 34.6465C201.542 35.4537 200.989 36.1758 200.308 36.7705C199.628 37.3652 198.777 37.8325 197.756 38.1299C196.735 38.4272 195.672 38.5971 194.481 38.5971C192.482 38.5971 190.696 38.1723 189.122 37.2803C187.548 36.3882 186.315 34.9439 185.421 32.9898C184.528 31.0358 184.06 28.5295 184.018 25.5559C184.018 22.4974 184.443 19.9062 185.379 17.8671C186.315 15.8281 187.591 14.3413 189.164 13.4493C190.738 12.5147 192.482 12.0899 194.396 12.0899C195.63 12.0899 196.735 12.3023 197.714 12.6846C198.692 13.0669 199.543 13.5767 200.181 14.2564C200.819 14.936 201.329 15.6582 201.754 16.5503C201.839 16.6777 201.925 16.8476 202.01 17.06C202.095 17.06 202.18 17.06 202.265 17.06C202.265 15.5308 202.265 13.959 202.265 12.4298C205.412 12.3873 208.56 12.2598 211.665 12.0899C211.41 21.0956 211.324 30.1012 211.452 39.1069C211.452 41.3583 210.942 43.2699 209.793 44.7992C208.687 46.3709 207.071 47.5178 204.944 48.2825C202.818 49.0471 200.393 49.4294 197.544 49.4294C194.906 49.4294 192.652 49.0896 190.738 48.4099ZM200.266 31.2482C200.904 30.7384 201.414 30.0163 201.797 29.0817C202.18 28.1472 202.35 27.0002 202.35 25.6834C202.35 24.324 202.18 23.1771 201.839 22.2C201.499 21.223 200.989 20.5009 200.308 19.9911C199.628 19.4814 198.82 19.2265 197.926 19.2265C197.033 19.2265 196.268 19.4814 195.587 19.9911C194.949 20.5009 194.439 21.223 194.098 22.2C193.758 23.1771 193.588 24.324 193.588 25.6834C193.588 27.0002 193.758 28.1472 194.141 29.1242C194.524 30.1012 194.992 30.7809 195.63 31.2907C196.268 31.7579 197.033 32.0128 197.926 32.0128C198.862 32.0128 199.67 31.7579 200.308 31.2482H200.266Z",
   pf8ce300: "M297.399 3.08433C300.546 3.25425 303.651 3.33921 306.799 3.42417C306.841 7.92699 306.884 12.3873 306.884 16.8902C306.926 16.8902 307.011 16.8902 307.054 16.8902C307.054 16.8052 307.139 16.6778 307.139 16.6353C307.139 16.5503 307.181 16.4654 307.224 16.3804C307.607 15.5308 308.117 14.7662 308.84 14.0865C309.521 13.4493 310.329 12.8971 311.265 12.5148C312.2 12.1325 313.306 11.9201 314.497 11.9201C316.411 11.9201 318.155 12.3873 319.729 13.3219C321.303 14.2564 322.579 15.7857 323.514 17.8247C324.493 19.9062 324.96 22.455 324.96 25.556C324.96 28.572 324.578 31.1208 323.642 33.1598C322.749 35.1988 321.473 36.6856 319.899 37.6627C318.283 38.6397 316.496 39.107 314.54 39.107C313.349 39.107 312.243 38.8946 311.265 38.5122C310.286 38.1299 309.478 37.6202 308.798 36.983C308.117 36.3033 307.564 35.5812 307.181 34.7316C307.181 34.7316 307.139 34.6466 307.096 34.6041C307.096 34.5616 307.096 34.5192 307.054 34.4767C306.969 34.4767 306.884 34.4767 306.799 34.4767C306.799 35.921 306.799 37.3653 306.799 38.8096C303.694 38.8521 300.589 38.9795 297.526 39.107C297.866 27.0853 297.866 15.0636 297.526 3.08433H297.399ZM307.224 28.9544C307.564 29.9314 308.075 30.696 308.713 31.2058C309.351 31.758 310.159 32.0129 311.052 32.0129C311.988 32.0129 312.753 31.758 313.434 31.2058C314.114 30.696 314.582 29.9314 314.923 28.9544C315.263 27.9773 315.433 26.8304 315.433 25.471C315.433 24.1542 315.263 22.9647 314.923 21.9877C314.582 21.0107 314.072 20.2461 313.434 19.7788C312.796 19.269 311.988 19.0141 311.094 19.0141C310.201 19.0141 309.393 19.269 308.755 19.7788C308.117 20.2885 307.607 21.0107 307.266 22.0302C306.926 23.0072 306.713 24.1542 306.756 25.471C306.756 26.7879 306.926 27.9348 307.266 28.9119L307.224 28.9544Z"
 };
-export function j1() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "AI News" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children:
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." })
-    }) })
-  ] });
-}
 export const j = [
   {
     badge: "Agent",
@@ -76,45 +69,18 @@ export const j = [
     description: "회의록이나 기획서를 분석해 액션 아이템을 자동 추출하고 캘린더에 등록. PM/기획자들의 반복 업무가 크게 줄어들 것으로 기대된다."
   }
 ];
-export function A({ badge: s, date: C, title: c, description: o }) {
-  return /* @__PURE__ */ t("div", { className: "bg-white content-stretch flex flex-col items-start p-[21px] relative rounded-[12px] shrink-0 flex-1 min-w-0 transition-all duration-200 hover:shadow-lg hover:-translate-y-[2px] active:scale-[0.98] active:shadow-none cursor-pointer", children: [
-    /* @__PURE__ */ e("div", { "aria-hidden": !0, className: "absolute border border-[#e5e7eb] border-solid inset-0 pointer-events-none rounded-[12px]" }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", children: /* @__PURE__ */ t("div", { className: "bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[16px] items-start relative size-full", children: [
-      /* @__PURE__ */ e("div", { className: "h-[160px] relative rounded-[8px] shrink-0 w-full overflow-hidden", children: /* @__PURE__ */ e("img", { alt: "", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[8px] size-full", src: S }) }),
-      /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children: [
-        /* @__PURE__ */ t("div", { className: "content-stretch flex items-center justify-between relative shrink-0 w-full", children: [
-          /* @__PURE__ */ e("div", { className: "bg-[#f0f2ff] content-stretch flex items-center justify-center px-[6px] py-[2px] relative rounded-[6px] shrink-0", children: /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-semibold justify-center leading-[0] relative shrink-0 text-[#0058e0] text-[14px] text-center whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: s }) }) }),
-          /* @__PURE__ */ e("div", { className: "[word-break:break-word] flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center leading-[0] relative shrink-0 text-[#4b5563] text-[12px] whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: C }) })
-        ] }),
-        /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start leading-[0] relative shrink-0 text-[14px] w-full", children: [
-          /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-bold justify-center overflow-hidden relative shrink-0 text-[#171719] text-ellipsis w-full whitespace-nowrap", children: /* @__PURE__ */ e("p", { className: "leading-[1.5] overflow-hidden text-ellipsis", children: c }) }),
-          /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center overflow-hidden relative shrink-0 text-[rgba(46,47,51,0.82)] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.8] line-clamp-3", children: o }) })
-        ] })
-      ] })
-    ] }) })
-  ] });
-}
 export function B1() {
   const s = j.slice(0, 3), C = j.slice(3, 6);
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-center relative shrink-0 w-full", "data-name": "AI News Details Container", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: s.map((c, o) => /* @__PURE__ */ e(A, { badge: c.badge, date: c.date, title: c.title, description: c.description }, o)) }),
-    /* @__PURE__*/ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: C.map((c, o) => /* @__PURE__ */ e(A, { badge: c.badge, date: c.date, title: c.title, description: c.description }, o + 3)) })
+    /* @__PURE__ */ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: s.map((c, o) => /* @__PURE__ */ e(NewsCard, { badge: c.badge, date: c.date, title: c.title, description: c.description, image: S }, o)) }),
+    /* @__PURE__*/ e("div", { className: "content-stretch flex gap-[24px] items-start relative shrink-0 w-full max-w-[808px]", children: C.map((c, o) => /* @__PURE__ */ e(NewsCard, { badge: c.badge, date: c.date, title: c.title, description: c.description, image: S }, o + 3)) })
   ] });
 }
 export function Z1() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "AI News Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center px-[20px] md:px-[40px] lg:px-[80px] xl:px-[120px] py-[80px] relative size-full", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center max-w-[560px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(j1, {}) }),
+    /* @__PURE__ */ e(SectionHeader, { eyebrow: "AI News", maxWidth: "max-w-[560px]", title: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }), description: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." }) }),
     /* @__PURE__ */ e(B1, {})
   ] }) }) });
-}
-export function A2() {
-  return /* @__PURE__ */ t("div", { className: "[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start leading-[0] relative shrink-0 text-center w-full", "data-name": "TextArea", children: [
-    /* @__PURE__ */ e(l, { delay: 0, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-medium justify-center relative shrink-0 text-[#0058e0] text-[20px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "AI News" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 70, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-extrabold justify-center relative shrink-0 text-[#131313] text-[32px] w-full", children: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }) }) }),
-    /* @__PURE__ */ e(l, { delay: 140, className: "w-full", children: /* @__PURE__ */ e("div", { className: "flex flex-col font-['Pretendard_Variable',sans-serif] font-normal justify-center relative shrink-0 text-[#4b5563] text-[14px] w-full", children:
-      /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." })
-    }) })
-  ] });
 }
 export const B2 = [
   {
@@ -174,7 +140,7 @@ export function z2() {
 }
 export function R2() {
   return /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "AI News Container", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center overflow-clip rounded-[inherit] size-full", children: /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[60px] items-center justify-center py-[60px] relative size-full", children: [
-    /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center px-[20px] relative shrink-0 w-full", "data-name": "SectionHeader", children: /* @__PURE__ */ e(A2, {}) }),
+    /* @__PURE__ */ e(SectionHeader, { eyebrow: "AI News", maxWidth: "px-[20px]", title: /* @__PURE__ */ e("p", { className: "leading-[1.5]", children: "이번주 AI 핫이슈" }), description: /* @__PURE__ */ e("p", { className: "leading-[1.8]", children: "요즘 IT 업계에서 가장 핫한 이슈들을 둘러보세요." }) }),
     /* @__PURE__ */ e(z2, {})
   ] }) }) });
 }

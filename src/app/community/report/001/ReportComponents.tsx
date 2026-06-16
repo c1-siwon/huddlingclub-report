@@ -16,19 +16,20 @@ import { Z1, R2 } from '@/components/ui/AINews';
 import { z1, E2 } from '@/components/ui/GetInvolved';
 import { BannerSectionDesktop, BannerSectionMobile } from '@/components/ui/CommunityBanner';
 import { W, q1 } from '@/components/ui/Footer';
+import { Divider } from '@/components/ui/Divider';
 
 function R1() {
   return /* @__PURE__ */ t("div", { className: "bg-white content-stretch flex flex-col items-center relative size-full", "data-name": "Desktop", children: [
     /* @__PURE__ */ e("div", { className: "h-[360px] relative shrink-0 w-full", children: /* @__PURE__ */ e(F, {}) }),
     /* @__PURE__ */ e(q, {}),
     /* @__PURE__ */ e(Y, {}),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full mt-[80px]", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] md:px-[60px] xl:px-[240px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, { className: "mt-[80px]" }),
     /* @__PURE__ */ e("div", { id: "desktop-section-best-report", children: /* @__PURE__ */ e(l, { children: /* @__PURE__ */ e(m1, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] md:px-[60px] xl:px-[240px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, {}),
     /* @__PURE__ */ e("div", { id: "desktop-section-monthly-live", children: /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(M1, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] md:px-[60px] xl:px-[240px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, {}),
     /* @__PURE__ */ e("div", { id: "desktop-section-ai-news", children: /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(Z1, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[20px] md:px-[60px] xl:px-[240px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, {}),
     /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(z1, {}) }),
     /* @__PURE__ */ e(BannerSectionDesktop, {}),
     /* @__PURE__ */ e(W, {})
@@ -40,13 +41,13 @@ function $2() {
     /* @__PURE__ */ e("div", { className: "h-[200px] relative shrink-0 w-full", children: /* @__PURE__ */ e(U1, {}) }),
     /* @__PURE__ */ e(Y1, {}),
     /* @__PURE__ */ e(J1, {}),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full mt-[60px]", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[60px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, { className: "mt-[60px]", padding: "px-[60px]" }),
     /* @__PURE__ */ e("div", { id: "section-best-report", children: /* @__PURE__ */ e(l, { children: /* @__PURE__ */ e(u2, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[60px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, { padding: "px-[60px]" }),
     /* @__PURE__ */ e("div", { id: "section-monthly-live", children: /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(j2, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[60px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, { padding: "px-[60px]" }),
     /* @__PURE__ */ e("div", { id: "section-ai-news", children: /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(R2, {}) }) }),
-    /* @__PURE__ */ e("div", { className: "relative shrink-0 w-full", "data-name": "Divider", children: /* @__PURE__ */ e("div", { className: "flex flex-col items-center justify-center size-full", children: /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col items-center justify-center px-[60px] py-[10px] relative size-full", children: /* @__PURE__ */ e("div", { className: "bg-gradient-to-r from-[rgba(112,115,124,0)] h-px relative shrink-0 to-[rgba(112,115,124,0)] via-1/2 via-[rgba(112,115,124,0.26)] w-full", "data-name": "div.divider" }) }) }) }),
+    /* @__PURE__ */ e(Divider, { padding: "px-[60px]" }),
     /* @__PURE__ */ e(l, { delay: 50, children: /* @__PURE__ */ e(E2, {}) }),
     /* @__PURE__ */ e(BannerSectionMobile, {}),
     /* @__PURE__ */ e(q1, {})
