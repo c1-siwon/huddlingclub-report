@@ -52,7 +52,7 @@ export const ModalContext = U2({
 export const VideoContext = U2({ startTime: 6, setStartTime: (v: number) => {}, isPlaying: false, setIsPlaying: (v: boolean) => {} });
 
 // 외부 링크 — 인증/입장 동선에서 새 탭으로 여는 URL (단일 출처로 관리)
-export const DISCORD_URL = "https://discord.gg/huddling"; // TODO: 실제 허들링 디스코드 초대 링크로 교체
+export const DISCORD_URL = "https://discord.gg/fS222SFX2";
 export const KAKAO_URL = "https://open.kakao.com/o/gPjVAOXf";
 
 export function l({ children: s, delay: C = 0, className: c = "" }) {

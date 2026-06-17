@@ -26,17 +26,37 @@ function Spinner() {
   return /* @__PURE__ */ e("span", { className: "inline-block w-[20px] h-[20px] rounded-full border-[2px] border-white/40 border-t-white animate-spin" });
 }
 
+// 눈 뜬 아이콘 (비밀번호 표시 중 → type=text)
+function EyeIcon() {
+  return /* @__PURE__ */ t("svg", { width: 20, height: 20, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
+    /* @__PURE__ */ e("path", { d: "M2.5 10S5 5 10 5s7.5 5 7.5 5-2.5 5-7.5 5-7.5-5-7.5-5Z", stroke: "currentColor", strokeWidth: 1.4, strokeLinejoin: "round" }),
+    /* @__PURE__ */ e("circle", { cx: 10, cy: 10, r: 2.3, stroke: "currentColor", strokeWidth: 1.4 })
+  ] });
+}
+
+// 눈 감은 아이콘 (기본 → type=password)
+function EyeOffIcon() {
+  return /* @__PURE__ */ t("svg", { width: 20, height: 20, viewBox: "0 0 20 20", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
+    /* @__PURE__ */ e("path", { d: "M8.2 4.7A7.4 7.4 0 0 1 10 4.5c4.9 0 7.2 4.3 7.5 5-.18.46-.85 1.7-2 2.85", stroke: "currentColor", strokeWidth: 1.4, strokeLinecap: "round", strokeLinejoin: "round" }),
+    /* @__PURE__ */ e("path", { d: "M5.1 5.7C3.35 6.85 2.55 8.55 2.5 9.5c.3.7 2.7 5 7.5 5 1.2 0 2.25-.27 3.15-.7", stroke: "currentColor", strokeWidth: 1.4, strokeLinecap: "round", strokeLinejoin: "round" }),
+    /* @__PURE__ */ e("path", { d: "M8.4 8.4a2.2 2.2 0 0 0 3.1 3.1", stroke: "currentColor", strokeWidth: 1.4, strokeLinecap: "round", strokeLinejoin: "round" }),
+    /* @__PURE__ */ e("path", { d: "M3.5 3.5l13 13", stroke: "currentColor", strokeWidth: 1.4, strokeLinecap: "round" })
+  ] });
+}
+
 export function PasswordModal() {
   const { open, setOpen, setAuthenticated, authenticated } = n3(ModalContext);
   const [pw, setPw] = L("");
   const [status, setStatus] = L("idle"); // idle | loading | error | success
   const [imgError, setImgError] = L(false); // success 이미지 로드 실패 시 placeholder 대체
+  const [showPw, setShowPw] = L(false);     // 비밀번호 표시 토글
 
   // 모달이 열릴 때마다 상태 초기화 (이미 인증된 경우 곧장 success 화면)
   N(() => {
     if (open) {
       setPw("");
       setImgError(false);
+      setShowPw(false);
       setStatus(authenticated ? "success" : "idle");
     }
   }, [open]);
@@ -103,7 +123,10 @@ export function PasswordModal() {
               ] })
             ] }),
             /* @__PURE__ */ t("div", { className: "w-full flex flex-col gap-[8px]", children: [
-              /* @__PURE__ */ e("input", { type: "password", value: pw, disabled: isLoading, onChange: handleChange, onKeyDown: (ev) => { if (ev.key === "Enter") handleSubmit(); }, placeholder: "비밀번호 입력", className: `w-full h-[48px] box-border border rounded-[12px] py-[13px] px-[16px] font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#131313] placeholder:text-[#757575] outline-none ${isError ? "border-[#ff543e]" : "border-[#e5e7eb] focus:border-[#0058e0]"}` }),
+              /* @__PURE__ */ t("div", { className: "relative w-full", children: [
+                /* @__PURE__ */ e("input", { type: showPw ? "text" : "password", value: pw, disabled: isLoading, onChange: handleChange, onKeyDown: (ev) => { if (ev.key === "Enter") handleSubmit(); }, placeholder: "비밀번호 입력", className: `w-full h-[48px] box-border border rounded-[12px] py-[13px] pl-[16px] pr-[44px] font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#131313] placeholder:text-[#757575] outline-none ${isError ? "border-[#ff543e]" : "border-[#e5e7eb] focus:border-[#0058e0]"}` }),
+                /* @__PURE__ */ e("button", { type: "button", onClick: () => setShowPw((v) => !v), "aria-label": showPw ? "비밀번호 숨기기" : "비밀번호 표시", className: "absolute right-[14px] top-1/2 -translate-y-1/2 text-[#9ca3af] hover:text-[#131313] cursor-pointer", children: showPw ? /* @__PURE__ */ e(EyeIcon, {}) : /* @__PURE__ */ e(EyeOffIcon, {}) })
+              ] }),
               isError && /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[12px] text-[#ff543e]", children: "비밀번호가 일치하지 않습니다." })
             ] }),
             /* @__PURE__ */ e("button", { type: "button", onClick: handleSubmit, disabled: isLoading, className: "w-full h-[48px] bg-[#0058e0] text-[#ffffff] font-['Pretendard_Variable',sans-serif] font-bold text-[14px] rounded-[12px] cursor-pointer hover:opacity-90 active:opacity-75 disabled:cursor-default flex items-center justify-center", children: isLoading ? /* @__PURE__ */ e(Spinner, {}) : "확인" })

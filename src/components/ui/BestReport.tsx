@@ -4,7 +4,7 @@
 /** 이주의 베스트 실험 섹션 — ReportComponents.tsx에서 분리 */
 import React from 'react';
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
-import { CrownIcon, ModalContext, S1, VideoContext, l, n3 } from '@/components/ui/_shared';
+import { CrownIcon, ModalContext, S1, VideoContext, l, n3, L, N, g } from '@/components/ui/_shared';
 import { Button } from '@/components/ui/Button';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { SocialLinks } from '@/components/ui/SocialLinks';
@@ -34,6 +34,40 @@ export function l1() {
 export function s1() {
   return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: R }) });
 }
+// 인증 후 해금되는 Q&A 3개 (인증 전에는 잠겨 있음)
+const UNLOCKED_QA = [
+  { question: "결과적으로 어떤 변화가 있었나요?", answer: "첫 컬렉션 클릭률이 18% 정도 올랐고, 무엇보다 '뭘 눌러야 할지 모르겠다'는 피드백이 눈에 띄게 줄었어요. 숫자보다 그 정성적 반응이 더 반가웠습니다." },
+  { question: "예상과 달랐던 부분이 있었나요?", answer: "체류시간은 거의 그대로였어요. 처음엔 실패한 줄 알았는데, 다시 보니 '오래 머무는 것'이 아니라 '빨리 원하는 걸 찾는 것'이 목표였더라고요. 지표를 다시 정의하게 된 계기였습니다." },
+  { question: "다음 실험을 준비하는 분께 한마디 부탁드려요.", answer: "거창한 가설 하나보다, 검증 가능한 작은 질문 하나가 훨씬 힘이 셉니다. 그리고 실패한 실험도 꼭 기록으로 남겨주세요. 그게 다음 사람의 출발점이 되니까요." }
+];
+
+// 인증 완료 후 모달이 닫히는 순간, 잠겨있던 Q&A를 위에서부터 0.15초 간격으로 순차 등장시킨다.
+// 등장 효과: opacity 0→1, translateY 16px→0, duration 0.4s ease-out. 첫 항목 위치로 자동 스크롤.
+function UnlockedQA() {
+  const { authenticated, open } = n3(ModalContext);
+  const [show, setShow] = L(false);
+  const firstRef = g(null);
+  N(() => {
+    if (authenticated && !open && !show) {
+      const id = requestAnimationFrame(() => {
+        setShow(true);
+        const el = firstRef.current;
+        // 현재 보이는 레이아웃(데스크탑/모바일 중 하나)에서만 스크롤 실행
+        if (el && el.offsetParent !== null) el.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      return () => cancelAnimationFrame(id);
+    }
+  }, [authenticated, open, show]);
+  if (!authenticated) return null;
+  return /* @__PURE__ */ t(Z, { children: UNLOCKED_QA.map((it, i) =>
+    /* @__PURE__ */ e("div", {
+      ref: i === 0 ? firstRef : void 0,
+      className: `w-full transition-all duration-[400ms] ease-out motion-reduce:transition-none ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`,
+      style: { transitionDelay: `${i * 150}ms` },
+      children: /* @__PURE__ */ e(QAItem, { question: it.question, answer: it.answer })
+    }, i)
+  ) });
+}
 export function C1() {
   // 인증 후에는 그라디언트 페이드아웃 제거 → 전체 Q&A 노출
   const { authenticated } = n3(ModalContext);
@@ -46,7 +80,8 @@ export function o1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ e(QAItem, { question: "먼저 간단한 인사 부탁드려요.", answer: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }),
     /* @__PURE__ */ e(QAItem, { question: "이번 실험은 어떤 문제에서 출발했나요?", answer: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.', media: /* @__PURE__ */ e(s1, {}) }),
-    /* @__PURE__ */ e(C1, {})
+    /* @__PURE__ */ e(C1, {}),
+    /* @__PURE__ */ e(UnlockedQA, {})
   ] });
 }
 export function ReportCTAButton() {
@@ -120,7 +155,8 @@ export function f2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full", "data-name": "itemlist", children: [
     /* @__PURE__ */ e(QAItem, { question: "먼저 간단한 인사 부탁드려요.", answer: "안녕하세요! 허들링 클럽 프로덕트 디자이너 퍼디입니다. 지금부터 홈 컬렉션 UI A/B 테스트의 실험 과정과 거기서 배운 점을 공유해보려고 해요. 거창한 결론보다는, 제가 어디서 헤맸는지를 솔직하게 남기는 게 다음 분께 더 도움이 될 것 같았습니다." }),
     /* @__PURE__ */ e(QAItem, { question: "이번 실험은 어떤 문제에서 출발했나요?", answer: '홈 첫 진입에서 컬렉션 카드가 너무 빽빽하게 깔려서, 정작 "뭘 눌러야 하지?"를 못 찾고 나가는 분이 많았어요. 그래서 "스크롤하기 전에 첫 컬렉션이 눈에 들어오는가" 하나만 핵심 가설로 잡았습니다.', media: /* @__PURE__ */ e(c2, {}) }),
-    /* @__PURE__ */ e(o2, {})
+    /* @__PURE__ */ e(o2, {}),
+    /* @__PURE__ */ e(UnlockedQA, {})
   ] });
 }
 export function h2() {
