@@ -35,9 +35,11 @@ export function s1() {
   return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: R }) });
 }
 export function C1() {
+  // 인증 후에는 그라디언트 페이드아웃 제거 → 전체 Q&A 노출
+  const { authenticated } = n3(ModalContext);
   return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
     /* @__PURE__ */ e(QAItem, { question: "실험 과정에서 가장 어려웠던 점은 무엇인가요?", answer: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }),
-    /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
+    !authenticated && /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
   ] });
 }
 export function o1() {
@@ -52,6 +54,9 @@ export function ReportCTAButton() {
   return /* @__PURE__ */ e(Button, { label: "리포트 전체 보기", dataName: "Report CTA Button", onClick: () => setOpen(true) });
 }
 export function x1() {
+  // 인증 후에는 "리포트 전체 보기" 버튼 숨김
+  const { authenticated } = n3(ModalContext);
+  if (authenticated) return null;
   return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children:
     /* @__PURE__ */ e(ReportCTAButton, {})
   });
@@ -104,9 +109,11 @@ export function c2() {
   return /* @__PURE__ */ e("div", { className: "aspect-[514/230] relative rounded-[12px] shrink-0 w-full", style: { display: "none" }, "data-name": "image", children: /* @__PURE__ */ e("img", { alt: "실험 화면 캡처 이미지", className: "absolute inset-0 max-w-none object-cover pointer-events-none rounded-[12px] size-full", src: S1 }) });
 }
 export function o2() {
+  // 모바일: 인증 후 그라디언트 제거
+  const { authenticated } = n3(ModalContext);
   return /* @__PURE__ */ t("div", { className: "relative shrink-0 w-full", children: [
     /* @__PURE__ */ e(QAItem, { question: "실험 과정에서 가장 어려웠던 점은 무엇인가요?", answer: "가설을 세우는 것보다 검증 지표를 정하는 게 훨씬 어려웠어요. 클릭률만 봐야 하는지, 체류시간도 봐야 하는지 고민이 많았습니다. 결국 팀원들과 논의해서 핵심 지표 하나만 집중하기로 했어요." }),
-    /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
+    !authenticated && /* @__PURE__ */ e("div", { className: "absolute inset-0 z-10 pointer-events-none", style: { background: "linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%)" } })
   ] });
 }
 export function f2() {
@@ -117,6 +124,9 @@ export function f2() {
   ] });
 }
 export function h2() {
+  // 모바일: 인증 후 "리포트 전체 보기" 버튼 숨김
+  const { authenticated } = n3(ModalContext);
+  if (authenticated) return null;
   return /* @__PURE__ */ e("div", { className: "content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full", children:
     /* @__PURE__ */ e(ReportCTAButton, {})
   });

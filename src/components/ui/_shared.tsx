@@ -38,10 +38,22 @@ export const {
 } = React;
 
 // use polyfill for React 18
-export const ModalContext = U2({ open: false, setOpen: (v: boolean) => {} });
+// 모달 Context — 모달 열림 상태 + 멤버 인증 상태 + 모달 타입을 전역으로 공유
+export const ModalContext = U2({
+  open: false,
+  setOpen: (v: boolean) => {},
+  authenticated: false,       // 비밀번호 인증 완료 여부 (localStorage 미사용, 메모리 상태)
+  setAuthenticated: (v: boolean) => {},
+  modalType: "report",        // 모달 동작 타입 (현재 "report"만 사용)
+  setModalType: (v: string) => {},
+});
 
 // 비디오 시간 이동 Context
 export const VideoContext = U2({ startTime: 6, setStartTime: (v: number) => {}, isPlaying: false, setIsPlaying: (v: boolean) => {} });
+
+// 외부 링크 — 인증/입장 동선에서 새 탭으로 여는 URL (단일 출처로 관리)
+export const DISCORD_URL = "https://discord.gg/huddling"; // TODO: 실제 허들링 디스코드 초대 링크로 교체
+export const KAKAO_URL = "https://open.kakao.com/o/gPjVAOXf";
 
 export function l({ children: s, delay: C = 0, className: c = "" }) {
   const [o, b] = L(!1), h = g(null);

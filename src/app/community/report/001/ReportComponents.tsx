@@ -74,7 +74,10 @@ function I2() {
 function T2({ open, setOpen }) {
   const [startTime, setStartTime] = L(6);
   const [isPlaying, setIsPlaying] = L(false);
-  return /* @__PURE__ */ e(ModalContext.Provider, { value: { open, setOpen }, children:
+  // 멤버 인증 상태 / 모달 타입은 여러 섹션이 공유하므로 여기서 소유 (메모리 상태, localStorage 미사용)
+  const [authenticated, setAuthenticated] = L(false);
+  const [modalType, setModalType] = L("report");
+  return /* @__PURE__ */ e(ModalContext.Provider, { value: { open, setOpen, authenticated, setAuthenticated, modalType, setModalType }, children:
     /* @__PURE__ */ e(VideoContext.Provider, { value: { startTime, setStartTime, isPlaying, setIsPlaying }, children: /* @__PURE__ */ t("div", { className: "size-full", children: [
       /* @__PURE__ */ e(PasswordModal, {}),
       /* @__PURE__ */ e(I2, {}),

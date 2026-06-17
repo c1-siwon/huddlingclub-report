@@ -3,7 +3,7 @@
 'use client';
 /** 이번 달 라이브 하이라이트 섹션 — ReportComponents.tsx에서 분리 */
 import { jsx as e, jsxs as t, Fragment as Z } from 'react/jsx-runtime';
-import { CrownIcon, ModalContext, VideoContext, l, n3 } from '@/components/ui/_shared';
+import { CrownIcon, ModalContext, VideoContext, l, n3, DISCORD_URL } from '@/components/ui/_shared';
 import { Button } from '@/components/ui/Button';
 import { LiveBadge } from '@/components/ui/LiveBadge';
 import { SectionHeader } from '@/components/ui/SectionHeader';
@@ -32,8 +32,10 @@ export function k1() {
   ] });
 }
 export function y1() {
-  const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ e(Button, { label: "영상 풀 버전 보러가기", onClick: () => setOpen(true) });
+  // 인증 전: 비밀번호 모달 열기 / 인증 후: 디스코드 새 탭 바로 열기
+  const { setOpen, authenticated } = n3(ModalContext);
+  const handleClick = () => authenticated ? window.open(DISCORD_URL, "_blank", "noopener,noreferrer") : setOpen(true);
+  return /* @__PURE__ */ e(Button, { label: "영상 풀 버전 보러가기", onClick: handleClick });
 }
 export function _1() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
@@ -80,8 +82,10 @@ export function y2() {
   ] });
 }
 export function _2() {
-  const { setOpen } = n3(ModalContext);
-  return /* @__PURE__ */ e(Button, { label: "영상 풀 버전 보러가기", onClick: () => setOpen(true) });
+  // 모바일: 인증 전 모달 열기 / 인증 후 디스코드 바로 열기
+  const { setOpen, authenticated } = n3(ModalContext);
+  const handleClick = () => authenticated ? window.open(DISCORD_URL, "_blank", "noopener,noreferrer") : setOpen(true);
+  return /* @__PURE__ */ e(Button, { label: "영상 풀 버전 보러가기", onClick: handleClick });
 }
 export function V2() {
   return /* @__PURE__ */ t("div", { className: "content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full", "data-name": "Monthly Live Takeaways Container", children: [
