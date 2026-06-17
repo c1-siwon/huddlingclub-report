@@ -123,9 +123,10 @@ export function PasswordModal() {
               ] })
             ] }),
             /* @__PURE__ */ t("div", { className: "w-full flex flex-col gap-[8px]", children: [
-              /* @__PURE__ */ t("div", { className: "relative w-full", children: [
-                /* @__PURE__ */ e("input", { type: showPw ? "text" : "password", value: pw, disabled: isLoading, onChange: handleChange, onKeyDown: (ev) => { if (ev.key === "Enter") handleSubmit(); }, placeholder: "비밀번호 입력", className: `w-full h-[48px] box-border border rounded-[12px] py-[13px] pl-[16px] pr-[44px] font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#131313] placeholder:text-[#757575] outline-none ${isError ? "border-[#ff543e]" : "border-[#e5e7eb] focus:border-[#0058e0]"}` }),
-                /* @__PURE__ */ e("button", { type: "button", onClick: () => setShowPw((v) => !v), "aria-label": showPw ? "비밀번호 숨기기" : "비밀번호 표시", className: "absolute right-[14px] top-1/2 -translate-y-1/2 text-[#9ca3af] hover:text-[#131313] cursor-pointer", children: showPw ? /* @__PURE__ */ e(EyeIcon, {}) : /* @__PURE__ */ e(EyeOffIcon, {}) })
+              // 테두리/높이를 wrapper가 갖고, input·아이콘을 flex item으로 수직 중앙 정렬
+              /* @__PURE__ */ t("div", { className: `w-full h-[48px] box-border flex items-center gap-[8px] px-[16px] border rounded-[12px] ${isError ? "border-[#ff543e]" : "border-[#e5e7eb] focus-within:border-[#0058e0]"}`, children: [
+                /* @__PURE__ */ e("input", { type: showPw ? "text" : "password", value: pw, disabled: isLoading, onChange: handleChange, onKeyDown: (ev) => { if (ev.key === "Enter") handleSubmit(); }, placeholder: "비밀번호 입력", className: "flex-1 min-w-0 h-full bg-transparent border-0 p-0 font-['Pretendard_Variable',sans-serif] font-semibold text-[14px] text-[#131313] placeholder:text-[#757575] outline-none" }),
+                /* @__PURE__ */ e("button", { type: "button", onClick: () => setShowPw((v) => !v), "aria-label": showPw ? "비밀번호 숨기기" : "비밀번호 표시", className: "flex-shrink-0 flex items-center justify-center w-[20px] h-[20px] text-[#9ca3af] hover:text-[#131313] cursor-pointer", children: showPw ? /* @__PURE__ */ e(EyeIcon, {}) : /* @__PURE__ */ e(EyeOffIcon, {}) })
               ] }),
               isError && /* @__PURE__ */ e("p", { className: "font-['Pretendard_Variable',sans-serif] font-normal text-[12px] text-[#ff543e]", children: "비밀번호가 일치하지 않습니다." })
             ] }),
